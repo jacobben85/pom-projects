@@ -42,10 +42,15 @@ public class McpApiTest {
     /**
      * Test of getMcpPrograms method, of class McpApi.
      */
-    @Test
     public void testGetMcpPrograms() {
         System.out.println("getMcpPrograms");
         HashMap<String, String> result = McpApi.getMcpPrograms();
         McpApi.printHashMap(result);
+    }
+
+    @Test
+    public void testGetMcpSyndicatedIds() {
+        McpApi.getMcpSyndicatedIds();
+        McpApi.printContent();
     }
 }
