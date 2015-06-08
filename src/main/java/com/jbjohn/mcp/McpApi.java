@@ -8,6 +8,8 @@ package com.jbjohn.mcp;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -23,8 +25,7 @@ public class McpApi {
     public static String mcppublickey = "EA3D6521592F4885B4B22284CF8A32C3";
     public static String mcpprivatekey = "B9618F69B1DD4899A2E0DF3C0D2F9247";
 
-    public static String mcpAkamaiPath = System.getProperty("user.dir") + "\\xml\\mcpAkamai.xml";
-    public static String mcpProgramsPath = System.getProperty("user.dir") + "\\xml\\mcpPrograms.xml";
+    public static String mcpProgramsPath = System.getProperty("user.dir") + "/xml/mcpPrograms.xml";
     static long timestamp = unixtime();
 
     public static HashMap<String, String> getMcpPrograms() {
@@ -77,7 +78,6 @@ public class McpApi {
                         .getElementsByTagName("num_pages").item(0)
                         .getTextContent());
             }
-            // System.out.println(numberOfIterations);
             NodeList nlist = doc.getElementsByTagName("program");
 
             for (int x = 0; x < nlist.getLength(); x++) {
@@ -89,7 +89,6 @@ public class McpApi {
                         .getTextContent(), programId);
 
             }
-
         }
         return programs;
     }
@@ -97,5 +96,14 @@ public class McpApi {
     public static long unixtime() {
         long unixTime = System.currentTimeMillis() / 1000L;
         return unixTime;
+    }
+
+    public static void printHashMap(Map map) {
+        Iterator it = map.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            System.out.println(pair.getKey() + " = " + pair.getValue());
+            it.remove();
+        }
     }
 }
