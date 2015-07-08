@@ -13,11 +13,10 @@ public class Cache {
     public Cache() {
         cache = CacheBuilder.newBuilder().maximumSize(MAX_SIZE).build(new CacheLoader<String, Object>() {
             @Override
-            public String load(String key) {
-                return createRandom();
+            public Object load(String key) {
+                return generateData(key);
             }
-        }
-        );
+        });
     }
 
     public Object getEntry(String key) {
@@ -28,7 +27,16 @@ public class Cache {
         cache.put(key, value);
     }
 
-    private String createRandom() {
-        return "I'm a random string or resource... Be creative ;)";
+    private Object generateData(String key) {
+
+        switch (key) {
+            case "accessRules":
+                break;
+            case "syndicationRules":
+                break;
+            default:
+                break;
+        }
+        return "testing";
     }
 }
