@@ -21,6 +21,7 @@ import org.junit.Test;
  *
  * @author jbjohn
  */
+@Ignore
 public class LiveFyreServicesTest {
 
     public LiveFyreServicesTest() {

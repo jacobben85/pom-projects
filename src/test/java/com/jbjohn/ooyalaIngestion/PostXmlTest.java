@@ -42,23 +42,25 @@ public class PostXmlTest {
      */
     @Test
     public void testPostToServer() throws Exception {
-        System.out.println("postToServer");
+        System.out.println("post To Server");
         Integer counter = 1;
         while (counter > 0) {
 
-            PostXml.postToServer("3012384");
-            PostXml.postToServer("3012779");
-            PostXml.postToServer("3012790");
+            PostXml.postToServer("3047761");
+            PostXml.postToServer("3051931");
 
-            PostXml.postToServer("3012794");
-            PostXml.postToServer("3057907"); // smil file missing
-            PostXml.postToServer("3072707");
+            counter--;
+        }
+    }
 
-            PostXml.postToServer("3072870");
-            PostXml.postToServer("3073230");
-            PostXml.postToServer("3074108");
+    @Test
+    public void testPostToServerNeulion() throws Exception {
+        System.out.println("post To Server Neulion");
+        Integer counter = 1;
+        while (counter > 0) {
 
-            PostXml.postToServer("3074113");
+            //PostXml.postToServer("unidepp13072");
+            PostXml.postToServer("unidepfh230133");
             counter--;
         }
     }

@@ -24,6 +24,7 @@ public class PostXml {
     private static String url = "http://local.cms.uvn.io/feeds/video/mcp";
 
     public static void postToServer(String mcpId) throws IOException {
+        System.out.println(mcpId);
         xmlPath = System.getProperty("user.dir") + "/xml/video/" + mcpId + ".xml";
         postToServer();
     }

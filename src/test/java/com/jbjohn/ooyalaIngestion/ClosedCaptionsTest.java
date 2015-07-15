@@ -3,26 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.jbjohn.mcp;
+package com.jbjohn.ooyalaIngestion;
 
-import java.util.HashMap;
 import org.junit.After;
 import org.junit.AfterClass;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
  * @author jbjohn
  */
-@Ignore
-public class McpApiTest {
+public class ClosedCaptionsTest {
 
-    public McpApiTest() {
+    public ClosedCaptionsTest() {
     }
 
     @BeforeClass
@@ -42,17 +38,13 @@ public class McpApiTest {
     }
 
     /**
-     * Test of getMcpPrograms method, of class McpApi.
+     * Test of fetchClosedCaptions method, of class ClosedCaptions.
      */
-    public void testGetMcpPrograms() {
-        System.out.println("getMcpPrograms");
-        HashMap<String, String> result = McpApi.getMcpPrograms();
-        McpApi.printHashMap(result);
+    @Test
+    public void testFetchClosedCaptions() {
+        System.out.println("fetchClosedCaptions");
+        ClosedCaptions instance = new ClosedCaptions();
+        instance.fetchClosedCaptions();
     }
 
-    @Test
-    public void testGetMcpSyndicatedIds() {
-        McpApi.getMcpSyndicatedIds();
-        McpApi.printContent();
-    }
 }

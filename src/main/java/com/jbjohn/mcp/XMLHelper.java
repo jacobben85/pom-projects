@@ -47,13 +47,14 @@ public class XMLHelper {
 
     public static String xmlParser(String filepath) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader(new File(filepath)));
-            String line;
-            StringBuilder sb = new StringBuilder();
-            while ((line = br.readLine()) != null) {
-                sb.append(line.trim());
+            StringBuilder sb;
+            try (BufferedReader br = new BufferedReader(new FileReader(new File(filepath)))) {
+                String line;
+                sb = new StringBuilder();
+                while ((line = br.readLine()) != null) {
+                    sb.append(line.trim());
+                }
             }
-            br.close();
             return sb.toString();
         } catch (Exception e) {
             System.out.println(e.toString());
