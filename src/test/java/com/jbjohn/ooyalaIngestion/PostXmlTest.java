@@ -46,8 +46,8 @@ public class PostXmlTest {
         Integer counter = 1;
         while (counter > 0) {
 
-            PostXml.postToServer("3074113");
-            PostXml.postToServer("3074115");
+//            PostXml.postToServer("3074113");
+            PostXml.postToServer("3076161");
 
             counter--;
         }
@@ -59,8 +59,8 @@ public class PostXmlTest {
         Integer counter = 1;
         while (counter > 0) {
 
-            PostXml.postToServer("unidepp13072");
-            PostXml.postToServer("unidepfh230133");
+//            PostXml.postToServer("unidepp13072");
+//            PostXml.postToServer("unidepfh230133");
             counter--;
         }
     }

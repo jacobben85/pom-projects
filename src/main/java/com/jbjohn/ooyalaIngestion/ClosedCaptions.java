@@ -39,8 +39,9 @@ public class ClosedCaptions {
     public void fetchClosedCaptions() {
 
         Map<String, Object> closedCaptions = new HashMap<>();
-        closedCaptions.put("es", "http://vmsmedia.s3.amazonaws.com/iupl/69E/4D8/69E4D8C6F62D413B9E66026655C08DE3.xml");
-        closedCaptions.put("en", "http://vmsmedia.s3.amazonaws.com/captionupl/E3E/82F/E3E82F96B0B2441188B3E118717990C9_dfxp.xml");
+        closedCaptions.put("es", "http://vmsmedia.s3.amazonaws.com/captionupl/97F/9E4/97F9E4AA418C44CA8AC6DC9DD8C035C4.dfxp");
+        //closedCaptions.put("es", "http://vmsmedia.s3.amazonaws.com/iupl/69E/4D8/69E4D8C6F62D413B9E66026655C08DE3.xml");
+        //closedCaptions.put("en", "http://vmsmedia.s3.amazonaws.com/captionupl/E3E/82F/E3E82F96B0B2441188B3E118717990C9_dfxp.xml");
         System.out.println(closedCaptions.toString());
         Document testDoc = mergeClosedCaptions(closedCaptions);
         String test = "";
@@ -54,7 +55,7 @@ public class ClosedCaptions {
 
     /**
      * Closed caption file received from MCP is not directly supported by
-     * Ooyala, hence there need to be reprocessed.
+     * Ooyala, hence they need to be reprocessed.
      * @param closedCaptions
      * @return
      */

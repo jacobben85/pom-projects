@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sports-content>
+
+<sports-content xmlns:exsl="http://exslt.org/common" xmlns:bbc="http://www.bbc.co.uk/sport/sports-data" path-id="soccer/l.allsvenskan.se/event-summary/xt.opta.20150704170545-793228-post-event">
+  <sports-metadata date-time="2015-07-04T17:05:45+01:00" doc-id="xt.opta.20150704170545-793228-post-event" language="en-US" fixture-key="event-stats" document-class="event-summary" fixture-name="Event Score and Stats">
+    <sports-title />
+    <sports-content-codes>
+      <sports-content-code code-name="Opta" code-key="optasports.com" code-type="publisher" />
+      <sports-content-code code-name="XML Team Solutions, Inc." code-key="xmlteam.com" code-type="distributor" />
+      <sports-content-code code-type="sport" code-key="15054000" code-name="Soccer" />
+      <sports-content-code code-type="tournament" code-key="CFBB226" code-name="Swedish Allsvenskan" code-source="bbc.co.uk" />
+      <sports-content-code code-type="league" code-key="l.allsvenskan.se" code-name="Swedish Allsvenskan" code-source="xmlteam.com" />
+      <sports-content-code code-type="season" code-key="2015" />
+      <sports-content-code code-type="team" code-key="TFBB466" code-source="bbc.co.uk" />
+      <sports-content-code code-type="team" code-key="TFBB2061" code-source="bbc.co.uk" />
+    </sports-content-codes>
+  </sports-metadata>
+  <sports-event>
+    <event-metadata date-coverage-type="event" event-key="EFBO793228" event-status="post-event" bbc:result-status="certain" event-status-note="Result" start-date-time="2015-07-04T15:00:00+01:00" bbc:event-type="Regular" event-name="Åtvidabergs FF v Halmstads BK" event-outcome-type="regular">
+      <event-metadata-soccer week="14" minutes-elapsed="90">
+        <time-adjustment period-extra-time-elapsed="7" />
+      </event-metadata-soccer>
+      <site>
+        <site-metadata site-key="VFBB3346">
+          <name first="Kopparvallen" full="Kopparvallen" abbreviation="Kopparvallen" bbc:vide-code="Kopparvallen" />
+          <home-location country="Sweden" />
+        </site-metadata>
+        <site-stats alignment="home" />
+      </site>
+    </event-metadata>
+    <team id="EFBO793228-TFBB2061">
+      <team-metadata team-key="TFBB2061" alignment="home">
+        <name first="Åtvidabergs FF" full="Åtvidabergs FF" abbreviation="Åtvidabergs FF" nickname="Åtvidabergs FF" bbc:vide-code="Åtvidabergs FF" />
+      </team-metadata>
+      <team-stats score="0" score-opposing="0" event-outcome="tie">
+        <sub-score period-value="1" score="0" />
+        <sub-score period-value="2" score="0" />
+      </team-stats>
+      <player id="PO41224">
+        <player-metadata player-key="PO41224" position-regular="goalkeeper" uniform-number="1" line-formation-position="1" status="starter">
+          <name first="Henrik" last="Gustavsson" full="Henrik Gustavsson" abbreviation="Gustavsson" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO51758">
+        <player-metadata player-key="PO51758" position-regular="defender" uniform-number="4" line-formation-position="2" status="starter">
+          <name first="Andreas" last="Dahlén" full="Andreas Dahlén" abbreviation="Dahlén" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO66280">
+        <player-metadata player-key="PO66280" position-regular="defender" uniform-number="5" line-formation-position="5" status="starter">
+          <name first="Daniel" last="Hallingstrom" full="Daniel Hallingstrom" abbreviation="Hallingstrom" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO155564">
+        <player-metadata player-key="PO155564" position-regular="defender" uniform-number="3" line-formation-position="6" status="starter">
+          <name first="Manz" last="Karlsson" full="Manz Karlsson" abbreviation="Karlsson" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO79049">
+        <player-metadata player-key="PO79049" position-regular="defender" uniform-number="28" line-formation-position="3" status="starter">
+          <name first="Martin" last="Lorentzson" full="Martin Lorentzson" abbreviation="Lorentzson" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO81707">
+        <player-metadata player-key="PO81707" position-regular="midfielder" uniform-number="7" line-formation-position="7" status="starter">
+          <name first="Kristian" last="Bergström" full="Kristian Bergström" abbreviation="Bergström" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO181043">
+        <player-metadata player-key="PO181043" position-regular="midfielder" uniform-number="6" line-formation-position="4" status="starter">
+          <name first="Ammar" last="Ahmed" full="Ammar Ahmed" abbreviation="Ahmed" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO97528">
+        <player-metadata player-key="PO97528" position-regular="midfielder" uniform-number="14" line-formation-position="8" status="starter">
+          <name first="Simon" last="Skrabb" full="Simon Skrabb" abbreviation="Skrabb" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO43202">
+        <player-metadata player-key="PO43202" position-regular="midfielder" uniform-number="32" line-formation-position="11" status="starter">
+          <name first="Martin" last="Christensen" full="Martin Christensen" abbreviation="Christensen" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO61745">
+        <player-metadata player-key="PO61745" position-regular="forward" uniform-number="10" line-formation-position="10" status="starter">
+          <name first="Mauricio" last="Albornoz" full="Mauricio Albornoz" abbreviation="Albornoz" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO119907">
+        <player-metadata player-key="PO119907" position-regular="forward" uniform-number="19" line-formation-position="9" status="starter">
+          <name first="John" last="Owoeri" full="John Owoeri" abbreviation="Owoeri" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="84">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO81706">
+        <player-metadata player-key="PO81706" position-regular="defender" uniform-number="2" line-formation-position="0" status="bench">
+          <name first="Alberis" last="da Silva" full="Alberis da Silva" abbreviation="da Silva" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" time-played-total="">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO51704">
+        <player-metadata player-key="PO51704" position-regular="midfielder" uniform-number="9" line-formation-position="0" status="bench">
+          <name first="Victor" last="Sköld" full="Victor Sköld" abbreviation="Sköld" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" time-played-total="">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO102368">
+        <player-metadata player-key="PO102368" position-regular="forward" uniform-number="11" line-formation-position="0" status="bench">
+          <name first="Mario" last="Jelavic" full="Mario Jelavic" abbreviation="Jelavic" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" time-played-total="6">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO212921">
+        <player-metadata player-key="PO212921" position-regular="forward" uniform-number="13" line-formation-position="0" status="bench">
+          <name first="Kenny" last="Hildeby" full="Kenny Hildeby" abbreviation="Hildeby" />
+        </player-metadata>
+      </player>
+      <player id="PO192262">
+        <player-metadata player-key="PO192262" position-regular="midfielder" uniform-number="15" line-formation-position="0" status="bench">
+          <name first="David" last="Lundgren" full="David Lundgren" abbreviation="Lundgren" />
+        </player-metadata>
+      </player>
+      <player id="PO160797">
+        <player-metadata player-key="PO160797" position-regular="defender" uniform-number="17" line-formation-position="0" status="bench">
+          <name first="Hampus" last="Holmgren" full="Hampus Holmgren" abbreviation="Holmgren" />
+        </player-metadata>
+      </player>
+      <player id="PO82198">
+        <player-metadata player-key="PO82198" position-regular="goalkeeper" uniform-number="20" line-formation-position="0" status="bench">
+          <name first="Gustav" last="Jansson" full="Gustav Jansson" abbreviation="Jansson" />
+        </player-metadata>
+      </player>
+      <associate id="man42277">
+        <associate-metadata position="Manager" position-source="optasports.com" associate-key="man42277">
+          <name first="Roar" last="Hansen" full="Roar Hansen" abbreviation="Hansen" />
+        </associate-metadata>
+      </associate>
+    </team>
+    <team id="EFBO793228-TFBB466">
+      <team-metadata team-key="TFBB466" alignment="away">
+        <name first="Halmstads BK" full="Halmstads BK" abbreviation="Halmstads BK" nickname="Halmstads BK" bbc:vide-code="Halmstads BK" />
+      </team-metadata>
+      <team-stats score="0" score-opposing="0" event-outcome="tie">
+        <sub-score period-value="1" score="0" />
+        <sub-score period-value="2" score="0" />
+      </team-stats>
+      <player id="PO152148">
+        <player-metadata player-key="PO152148" position-regular="goalkeeper" uniform-number="1" line-formation-position="1" status="starter">
+          <name first="Stojan" last="Lukic" full="Stojan Lukic" abbreviation="Lukic" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO91072">
+        <player-metadata player-key="PO91072" position-regular="defender" uniform-number="2" line-formation-position="2" status="starter">
+          <name first="Viktor" last="Ljung" full="Viktor Ljung" abbreviation="Ljung" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO61689">
+        <player-metadata player-key="PO61689" position-regular="defender" uniform-number="6" line-formation-position="5" status="starter">
+          <name first="Mohammed" last="Ali Khan" full="Mohammed Ali Khan" abbreviation="Ali Khan" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO51881">
+        <player-metadata player-key="PO51881" position-regular="defender" uniform-number="28" line-formation-position="6" status="starter">
+          <name first="Jesper" last="Westerberg" full="Jesper Westerberg" abbreviation="Westerberg" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO61786">
+        <player-metadata player-key="PO61786" position-regular="defender" uniform-number="3" line-formation-position="3" status="starter">
+          <name first="Fredrik" last="Liverstam" full="Fredrik Liverstam" abbreviation="Liverstam" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO85851">
+        <player-metadata player-key="PO85851" position-regular="midfielder" uniform-number="10" line-formation-position="7" status="starter">
+          <name first="Antonio" last="Rojas" full="Antonio Rojas" abbreviation="Rojas" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO17976">
+        <player-metadata player-key="PO17976" position-regular="midfielder" uniform-number="5" line-formation-position="4" status="starter">
+          <name first="Christoffer" last="Andersson" full="Christoffer Andersson" abbreviation="Andersson" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="65">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO74247">
+        <player-metadata player-key="PO74247" position-regular="midfielder" uniform-number="11" line-formation-position="8" status="starter">
+          <name first="King" last="Gyan Osei" full="King Gyan Osei" abbreviation="Gyan Osei" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO19265">
+        <player-metadata player-key="PO19265" position-regular="forward" uniform-number="9" line-formation-position="10" status="starter">
+          <name first="James" last="Keene" full="James Keene" abbreviation="Keene" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="89">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO81887">
+        <player-metadata player-key="PO81887" position-regular="forward" uniform-number="19" line-formation-position="9" status="starter">
+          <name first="Snorre" last="Krogsgaard" full="Snorre Krogsgaard" abbreviation="Krogsgaard" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul cautions-total="1" />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO201708">
+        <player-metadata player-key="PO201708" position-regular="forward" uniform-number="7" line-formation-position="11" status="starter">
+          <name first="Junes" last="Barny" full="Junes Barny" abbreviation="Barny" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" events-started="1" time-played-total="90">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive shutouts="1" goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO27658">
+        <player-metadata player-key="PO27658" position-regular="midfielder" uniform-number="8" line-formation-position="0" status="bench">
+          <name first="Kristoffer" last="Fagercrantz" full="Kristoffer Fagercrantz" abbreviation="Fagercrantz" />
+        </player-metadata>
+      </player>
+      <player id="PO182410">
+        <player-metadata player-key="PO182410" position-regular="midfielder" uniform-number="16" line-formation-position="0" status="bench">
+          <name first="Eric Anders" last="Smith" full="Eric Anders Smith" abbreviation="Smith" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" time-played-total="25">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO198501">
+        <player-metadata player-key="PO198501" position-regular="midfielder" uniform-number="17" line-formation-position="0" status="bench">
+          <name first="Sead" last="Haksabanovic" full="Sead Haksabanovic" abbreviation="Haksabanovic" />
+        </player-metadata>
+      </player>
+      <player id="PO96082">
+        <player-metadata player-key="PO96082" position-regular="forward" uniform-number="18" line-formation-position="0" status="bench">
+          <name first="Shkodran" last="Maholli" full="Shkodran Maholli" abbreviation="Maholli" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" time-played-total="1">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO209089">
+        <player-metadata player-key="PO209089" position-regular="defender" uniform-number="21" line-formation-position="0" status="bench">
+          <name first="Andreas" last="Bengtsson" full="Andreas Bengtsson" abbreviation="Bengtsson" />
+        </player-metadata>
+      </player>
+      <player id="PO192734">
+        <player-metadata player-key="PO192734" position-regular="defender" uniform-number="26" line-formation-position="0" status="bench">
+          <name first="Alexander" last="Berntsson" full="Alexander Berntsson" abbreviation="Berntsson" />
+        </player-metadata>
+        <player-stats team-coverage="single-team" date-coverage-type="event" date-coverage-value="EFBO793228" time-played-total="">
+          <player-stats-soccer>
+            <stats-soccer-offensive />
+            <stats-soccer-defensive goals-against-total="0" />
+            <stats-soccer-foul />
+          </player-stats-soccer>
+        </player-stats>
+      </player>
+      <player id="PO156607">
+        <player-metadata player-key="PO156607" position-regular="goalkeeper" uniform-number="30" line-formation-position="0" status="bench">
+          <name first="Malkolm" last="Nilsson" full="Malkolm Nilsson" abbreviation="Nilsson" />
+        </player-metadata>
+      </player>
+      <associate id="man38106">
+        <associate-metadata position="Manager" position-source="optasports.com" associate-key="man38106">
+          <name first="Jan" last="Jönsson" full="Jan Jönsson" abbreviation="Jönsson" />
+        </associate-metadata>
+      </associate>
+    </team>
+    <officials>
+      <official>
+        <official-metadata official-key="PO41833" position="main-official">
+          <name first="Martin" last="Strömbergsson" full="Martin Strömbergsson" abbreviation="Strömbergsson" />
+        </official-metadata>
+      </official>
+    </officials>
+    <event-actions>
+      <event-actions-soccer>
+        <action-soccer-substitution id="a.590838361" sequence-number="20150704T164225+0100" minutes-elapsed="84" period-value="2" team-idref="EFBO793228-TFBB2061" person-replacing-position="forward" person-original-idref="PO119907" person-replacing-idref="PO102368" substitution-reason="Tactical" />
+        <action-soccer-substitution id="a.1596120582" sequence-number="20150704T161741+0100" minutes-elapsed="59" period-value="2" team-idref="EFBO793228-TFBB2061" person-replacing-position="defender" person-original-idref="PO66280" person-replacing-idref="PO81706" substitution-reason="Tactical" />
+        <action-soccer-substitution id="a.1357287335" sequence-number="20150704T162041+0100" minutes-elapsed="62" period-value="2" team-idref="EFBO793228-TFBB2061" person-replacing-position="midfielder" person-original-idref="PO97528" person-replacing-idref="PO51704" substitution-reason="Tactical" />
+        <action-soccer-penalty id="a.1807734072" sequence-number="20150704T152700+0100" minutes-elapsed="27" period-value="1" team-idref="EFBO793228-TFBB466" recipient-type="player" recipient-idref="PO81887" penalty-level="yellow-card" penalty-type="other" />
+        <action-soccer-substitution id="a.1724504787" sequence-number="20150704T162301+0100" minutes-elapsed="65" period-value="2" team-idref="EFBO793228-TFBB466" person-replacing-position="midfielder" person-original-idref="PO17976" person-replacing-idref="PO182410" substitution-reason="Tactical" />
+        <action-soccer-substitution id="a.225061856" sequence-number="20150704T164801+0100" minutes-elapsed="90" period-value="2" team-idref="EFBO793228-TFBB466" person-replacing-position="forward" person-original-idref="PO19265" person-replacing-idref="PO96082" substitution-reason="Tactical" />
+        <action-soccer-substitution id="a.445983304" sequence-number="20150704T163941+0100" minutes-elapsed="81" period-value="2" team-idref="EFBO793228-TFBB466" person-replacing-position="defender" person-original-idref="PO61689" person-replacing-idref="PO192734" substitution-reason="Tactical" />
+      </event-actions-soccer>
+    </event-actions>
+  </sports-event>
+</sports-content>
