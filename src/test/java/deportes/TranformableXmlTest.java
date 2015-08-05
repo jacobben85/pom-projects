@@ -53,7 +53,7 @@ public class TranformableXmlTest {
         Document xml = instance.parseXmlDocument();
         String key = instance.getStringValue("/sports-content/sports-event/event-metadata/@event-key", xml, null);
 
-        instance.validateXMLSchema("http://test-local.site.com/xsd/2.2/specification/sportsml-G2.xsd");
+        instance.validateXMLSchema("http://html.univision.com/jbjohn/xsd/2.2/specification/sportsml-G2.xsd");
     }
 
     public String getResource(String filePath) {
