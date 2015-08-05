@@ -4,15 +4,20 @@ import com.amazonaws.util.StringInputStream;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
+import javax.xml.XMLConstants;
 import javax.xml.namespace.QName;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
@@ -32,6 +37,7 @@ public class TranformableXml {
     private String rawXml;
     private String processedXml;
     private String xslt;
+    private String xsd;
     private boolean compress = false;
     private boolean encode = false;
     private boolean transformed = false;
@@ -106,7 +112,7 @@ public class TranformableXml {
             StringReader stylereader = new StringReader(xslt);
             StreamSource stylesource = new StreamSource(stylereader);
             TransformerFactory factory = TransformerFactory.newInstance();
-            javax.xml.transform.Transformer transformer;
+            Transformer transformer;
             try {
                 StringReader reader = new StringReader(rawXml);
                 StreamSource source = new StreamSource(reader);
@@ -122,7 +128,25 @@ public class TranformableXml {
             } catch (TransformerException ex) {
                 System.out.println("Exception" + ex.toString());
             }
+        } else {
+            processedXml = rawXml;
         }
+    }
+
+    public boolean validateXMLSchema(String xsd) {
+
+        try {
+            SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+            StreamSource schemasource = new StreamSource(xsd);
+            Schema schema = factory.newSchema(schemasource);
+            Validator validator = schema.newValidator();
+            StringReader reader = new StringReader(processedXml);
+            validator.validate(new StreamSource(reader));
+        } catch (IOException | SAXException e) {
+            System.out.println("Exception: " + e.getMessage());
+            return false;
+        }
+        return true;
     }
 
     private <T> T basicGetValue(String xpathExpression, Object doc, T defaultValue, QName type) {
@@ -145,6 +169,7 @@ public class TranformableXml {
 
     /**
      * Utility
+     *
      * @param node
      * @param attributeName
      * @return
@@ -163,6 +188,7 @@ public class TranformableXml {
 
     /**
      * Utility
+     *
      * @param node
      * @param attributeName
      * @param defaultValue
@@ -183,6 +209,7 @@ public class TranformableXml {
 
     /**
      * Utility
+     *
      * @param xpathExpression
      * @param doc
      * @return
@@ -193,6 +220,7 @@ public class TranformableXml {
 
     /**
      * Utility
+     *
      * @param xpathExpression
      * @param doc
      * @param defaultValue
@@ -204,6 +232,7 @@ public class TranformableXml {
 
     /**
      * Utility
+     *
      * @param xpathExpression
      * @param doc
      * @param defaultValue

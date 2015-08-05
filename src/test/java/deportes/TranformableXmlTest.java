@@ -12,6 +12,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.w3c.dom.Document;
 
 /**
  *
@@ -49,8 +50,10 @@ public class TranformableXmlTest {
         instance.setXslt(getResource("xsl/deportes/empty.xsl"));
 
         instance.process();
-        String processedXml = instance.getProcessedXml();
-        System.out.println(processedXml);
+        Document xml = instance.parseXmlDocument();
+        String key = instance.getStringValue("/sports-content/sports-event/event-metadata/@event-key", xml, null);
+
+        instance.validateXMLSchema("http://test-local.site.com/xsd/2.2/specification/sportsml-G2.xsd");
     }
 
     public String getResource(String filePath) {

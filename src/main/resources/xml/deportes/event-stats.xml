@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sports-content>
-
-<sports-content xmlns:exsl="http://exslt.org/common" xmlns:bbc="http://www.bbc.co.uk/sport/sports-data" path-id="soccer/l.allsvenskan.se/event-summary/xt.opta.20150704170545-793228-post-event">
-  <sports-metadata date-time="2015-07-04T17:05:45+01:00" doc-id="xt.opta.20150704170545-793228-post-event" language="en-US" fixture-key="event-stats" document-class="event-summary" fixture-name="Event Score and Stats">
+<sports-content xmlns="http://iptc.org/std/SportsML/2008-04-01/">
+  <sports-metadata date-time="2015-07-04T17:05:45+01:00" doc-id="xt.opta.20150704170545-793228-post-event" language="en-US" fixture-key="event:stats" document-class="event-summary" fixture-name="Event Score and Stats">
     <sports-title />
     <sports-content-codes>
-      <sports-content-code code-name="Opta" code-key="optasports.com" code-type="publisher" />
+      <sports-content-code code-name="Opta" code-key="optasports:com" code-type="publisher" />
       <sports-content-code code-name="XML Team Solutions, Inc." code-key="xmlteam.com" code-type="distributor" />
       <sports-content-code code-type="sport" code-key="15054000" code-name="Soccer" />
       <sports-content-code code-type="tournament" code-key="CFBB226" code-name="Swedish Allsvenskan" code-source="bbc.co.uk" />
@@ -16,13 +14,13 @@
     </sports-content-codes>
   </sports-metadata>
   <sports-event>
-    <event-metadata date-coverage-type="event" event-key="EFBO793228" event-status="post-event" bbc:result-status="certain" event-status-note="Result" start-date-time="2015-07-04T15:00:00+01:00" bbc:event-type="Regular" event-name="Åtvidabergs FF v Halmstads BK" event-outcome-type="regular">
+    <event-metadata date-coverage-type="event" event-key="EFBO793228" event-status="post-event" event-status-note="Result" start-date-time="2015-07-04T15:00:00+01:00" event-name="Åtvidabergs FF v Halmstads BK" event-outcome-type="regular">
       <event-metadata-soccer week="14" minutes-elapsed="90">
         <time-adjustment period-extra-time-elapsed="7" />
       </event-metadata-soccer>
       <site>
         <site-metadata site-key="VFBB3346">
-          <name first="Kopparvallen" full="Kopparvallen" abbreviation="Kopparvallen" bbc:vide-code="Kopparvallen" />
+          <name first="Kopparvallen" full="Kopparvallen" abbreviation="Kopparvallen" />
           <home-location country="Sweden" />
         </site-metadata>
         <site-stats alignment="home" />
@@ -30,7 +28,7 @@
     </event-metadata>
     <team id="EFBO793228-TFBB2061">
       <team-metadata team-key="TFBB2061" alignment="home">
-        <name first="Åtvidabergs FF" full="Åtvidabergs FF" abbreviation="Åtvidabergs FF" nickname="Åtvidabergs FF" bbc:vide-code="Åtvidabergs FF" />
+        <name first="Åtvidabergs FF" full="Åtvidabergs FF" abbreviation="Åtvidabergs FF" nickname="Åtvidabergs FF" />
       </team-metadata>
       <team-stats score="0" score-opposing="0" event-outcome="tie">
         <sub-score period-value="1" score="0" />
@@ -232,7 +230,7 @@
     </team>
     <team id="EFBO793228-TFBB466">
       <team-metadata team-key="TFBB466" alignment="away">
-        <name first="Halmstads BK" full="Halmstads BK" abbreviation="Halmstads BK" nickname="Halmstads BK" bbc:vide-code="Halmstads BK" />
+        <name first="Halmstads BK" full="Halmstads BK" abbreviation="Halmstads BK" nickname="Halmstads BK" />
       </team-metadata>
       <team-stats score="0" score-opposing="0" event-outcome="tie">
         <sub-score period-value="1" score="0" />
