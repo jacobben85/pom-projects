@@ -1,4 +1,4 @@
-package deportes;
+package com.jbjohn.deportes;
 
 import com.jbjohn.mcp.XMLHelper;
 import java.io.BufferedReader;

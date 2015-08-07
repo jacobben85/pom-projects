@@ -1,4 +1,4 @@
-package deportes;
+package com.jbjohn.deportes;
 
 import com.amazonaws.util.StringInputStream;
 import java.io.IOException;

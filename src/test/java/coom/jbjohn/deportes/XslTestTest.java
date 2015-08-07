@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package deportes;
+package coom.jbjohn.deportes;
 
+import com.jbjohn.deportes.XslTest;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,9 +16,9 @@ import org.junit.Test;
  *
  * @author jbjohn
  */
-public class PostToLocalTest {
+public class XslTestTest {
 
-    public PostToLocalTest() {
+    public XslTestTest() {
     }
 
     @BeforeClass
@@ -37,16 +38,16 @@ public class PostToLocalTest {
     }
 
     /**
-     * Test of postToServer method, of class PostToLocal.
+     * Test of process method, of class XslTest.
      */
     @Test
-    public void testPostToServerBoolean() throws Exception {
-        System.out.println("postToServer");
-        boolean mcpId = true;
-        Integer counter = 10;
-        while (counter > 0) {
-            PostToLocal.postToServer(mcpId);
-            counter--;
-        }
+    public void testProcess() {
+        System.out.println("process");
+        String xmlt = "testing";
+        String xslt = "testing";
+        XslTest instance = new XslTest();
+        boolean expResult = false;
+        boolean result = instance.process(xmlt, xslt);
     }
+
 }

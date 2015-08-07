@@ -1,4 +1,4 @@
-package deportes;
+package com.jbjohn.deportes;
 
 import java.io.InputStream;
 import java.io.StringWriter;

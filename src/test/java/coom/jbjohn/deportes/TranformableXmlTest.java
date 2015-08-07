@@ -1,5 +1,6 @@
-package deportes;
+package coom.jbjohn.deportes;
 
+import com.jbjohn.deportes.TranformableXml;
 import java.io.InputStream;
 import java.io.StringWriter;
 import javax.xml.transform.Transformer;

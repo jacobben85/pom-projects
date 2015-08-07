@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package deportes;
+package com.jbjohn.deportes;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -15,9 +15,9 @@ import org.junit.Test;
  *
  * @author jbjohn
  */
-public class XslTestTest {
+public class XmlTeamNormalizeTest {
 
-    public XslTestTest() {
+    public XmlTeamNormalizeTest() {
     }
 
     @BeforeClass
@@ -37,16 +37,12 @@ public class XslTestTest {
     }
 
     /**
-     * Test of process method, of class XslTest.
+     * Test of process method, of class XmlTeamNormalize.
      */
     @Test
     public void testProcess() {
-        System.out.println("process");
-        String xmlt = "testing";
-        String xslt = "testing";
-        XslTest instance = new XslTest();
-        boolean expResult = false;
-        boolean result = instance.process(xmlt, xslt);
+        XmlTeamNormalize instance = new XmlTeamNormalize();
+        instance.process();
     }
 
 }
