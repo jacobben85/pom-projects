@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sports-content xmlns="http://iptc.org/std/SportsML/2008-04-01/"
+                xmlns:xts="http://www.xmlteam.com"
+                xmlns:bbc="http://www.bbc.co.uk/sport/sports-data">
+   <sports-metadata date-time="2015-07-07T00:51:44+01:00"
+                    doc-id="xt.opta.20150707005144-791551-post-event"
+                    language="en-US"
+                    fixture-key="event-stats"
+                    document-class="event-summary"
+                    fixture-name="Event Score and Stats">
+      <sports-title/>
+      <sports-content-codes>
+         <sports-content-code code-name="Opta" code-key="optasports.com" code-type="publisher"/>
+         <sports-content-code code-name="XML Team Solutions, Inc."
+                              code-key="xmlteam.com"
+                              code-type="distributor"/>
+         <sports-content-code code-type="sport" code-key="15054000" code-name="Soccer"/>
+         <sports-content-code code-type="league"
+                              code-key="l.mlsnet.com"
+                              code-name="US Major League Soccer"
+                              code-source="xmlteam.com"/>
+         <sports-content-code code-type="season" code-key="2015"/>
+         <sports-content-code code-type="team"
+                              code-key="l.mlsnet.com-t.ZR6"
+                              code-name="New York City FC "
+                              code-source="xmlteam.com"/>
+         <sports-content-code code-type="team"
+                              code-key="l.mlsnet.com-t.ZR2"
+                              code-name="Montreal Impact"
+                              code-source="xmlteam.com"/>
+      </sports-content-codes>
+   </sports-metadata>
+   <sports-event>
+      <event-metadata date-coverage-type="event"
+                      event-key="l.mlsnet.com-2015-e.791551"
+                      event-status="post-event"
+                      event-status-note="Result"
+                      start-date-time="2015-07-05T01:00:00+01:00"
+                      event-name="Montreal Impact v New York City FC"
+                      event-outcome-type="regular">
+         <event-metadata-soccer week="19" minutes-elapsed="90">
+            <time-adjustment period-extra-time-elapsed="5"/>
+         </event-metadata-soccer>
+         <site>
+            <site-metadata site-key="s.7092">
+               <name first="Stade Saputo"
+                     full="Stade Saputo"
+                     abbreviation="Stade Saputo"/>
+               <home-location country="USA"/>
+            </site-metadata>
+            <site-stats alignment="home" attendance="18112"/>
+         </site>
+      </event-metadata>
+      <team id="e.791551-t.1616">
+         <team-metadata team-key="t.1616" alignment="home">
+            <name first="Montreal Impact"
+                  full="Montreal Impact"
+                  abbreviation="Montreal Impact"
+                  nickname="Montreal Impact"/>
+         </team-metadata>
+         <team-stats score="1"
+                     score-opposing="2"
+                     event-outcome="loss"
+                     time-of-possession-percentage="54.5">
+            <sub-score period-value="1" score="0"/>
+            <sub-score period-value="2" score="1"/>
+            <team-stats-soccer line-formation="4231">
+               <stats-soccer-offensive shots-total="25" shots-on-goal-total="10" corner-kicks="10"/>
+               <stats-soccer-foul fouls-commited="13"/>
+            </team-stats-soccer>
+         </team-stats>
+         <player id="p.109275">
+            <player-metadata player-key="p.109275"
+                             position-regular="goalkeeper"
+                             uniform-number="1"
+                             status="starter">
+               <name first="Evan" last="Bush" full="Evan Bush" abbreviation="Bush"/>
+               <player-metadata-soccer line-formation-position="1"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="1" touches="30">
+                  <stats-soccer-offensive passes-total="23"
+                                          passes-complete="20"
+                                          passes-incomplete="3"
+                                          passes-complete-long="7"/>
+                  <stats-soccer-defensive goals-against-total="2" saves="1" save-percentage="0.333"/>
+                  <stats-soccer-foul fouls-suffered="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.180562">
+            <player-metadata player-key="p.180562"
+                             position-regular="defender"
+                             uniform-number="2"
+                             status="starter">
+               <name first="Ambroise"
+                     last="Oyongo Bitolo"
+                     full="Ambroise Oyongo"
+                     abbreviation="Oyongo Bitolo"/>
+               <player-metadata-soccer line-formation-position="2"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="1" touches="80">
+                  <stats-soccer-offensive shots-total="1"
+                                          shots-off-goal-total="1"
+                                          crosses-18-yard="2"
+                                          crosses-18-yard-plus="2"
+                                          passes-total="51"
+                                          passes-complete="39"
+                                          passes-incomplete="12"
+                                          passes-complete-3rd-final="10"
+                                          passes-complete-long="2"
+                                          tackles-total="3"
+                                          tackles-won="3"
+                                          tackles-lost="0"/>
+                  <stats-soccer-defensive goals-against-total="2"
+                                          shots-blocked-outfielder="1"
+                                          shots-blocked-cross="1"
+                                          clearances-successful="1"
+                                          interceptions="1"/>
+                  <stats-soccer-foul fouls-commited="2" fouls-suffered="2"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.179846">
+            <player-metadata player-key="p.179846"
+                             position-regular="defender"
+                             uniform-number="36"
+                             status="starter">
+               <name first="Víctor"
+                     last="Cabrera"
+                     full="Víctor Cabrera"
+                     abbreviation="Cabrera"/>
+               <player-metadata-soccer line-formation-position="5"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="1" touches="73">
+                  <stats-soccer-offensive passes-total="47"
+                                          passes-complete="39"
+                                          passes-incomplete="8"
+                                          passes-complete-3rd-final="4"
+                                          passes-complete-long="8"
+                                          tackles-total="6"
+                                          tackles-won="6"
+                                          tackles-lost="0"/>
+                  <stats-soccer-defensive goals-against-total="2" clearances-successful="4" interceptions="7"/>
+                  <stats-soccer-foul fouls-suffered="2"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.42584">
+            <player-metadata player-key="p.42584"
+                             position-regular="defender"
+                             uniform-number="23"
+                             status="starter">
+               <name first="Laurent"
+                     last="Ciman"
+                     full="Laurent Ciman"
+                     abbreviation="Ciman"/>
+               <player-metadata-soccer line-formation-position="6"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="2" touches="84">
+                  <stats-soccer-offensive shots-total="5"
+                                          shots-on-goal-total="1"
+                                          shots-off-goal-total="4"
+                                          crosses-18-yard="1"
+                                          free-kicks="1"
+                                          passes-total="59"
+                                          passes-complete="51"
+                                          passes-incomplete="8"
+                                          passes-complete-3rd-final="5"
+                                          passes-complete-long="10"
+                                          tackles-total="4"
+                                          tackles-won="4"
+                                          tackles-lost="0"/>
+                  <stats-soccer-defensive goals-against-total="2" interceptions="2"/>
+                  <stats-soccer-foul fouls-commited="2" fouls-suffered="2" cautions-total="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.96201">
+            <player-metadata player-key="p.96201"
+                             position-regular="defender"
+                             uniform-number="25"
+                             status="starter">
+               <name first="Donny" last="Toia" full="Donny Toia" abbreviation="Toia"/>
+               <player-metadata-soccer line-formation-position="3"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="88">
+               <player-stats-soccer aerials-won="2" touches="68">
+                  <stats-soccer-offensive shots-total="1"
+                                          shots-on-goal-total="1"
+                                          crosses-18-yard-plus="1"
+                                          passes-total="41"
+                                          passes-complete="34"
+                                          passes-incomplete="7"
+                                          passes-complete-3rd-final="8"
+                                          passes-complete-long="3"
+                                          tackles-total="3"
+                                          tackles-won="3"
+                                          tackles-lost="0"/>
+                  <stats-soccer-defensive goals-against-total="2"
+                                          shots-blocked-cross="1"
+                                          clearances-successful="2"
+                                          interceptions="5"/>
+                  <stats-soccer-foul fouls-commited="1" fouls-suffered="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.110606">
+            <player-metadata player-key="p.110606"
+                             position-regular="midfielder"
+                             uniform-number="16"
+                             status="starter">
+               <name first="Calum"
+                     last="Mallace"
+                     full="Calum Mallace"
+                     abbreviation="Mallace"/>
+               <player-metadata-soccer line-formation-position="8"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="63">
+               <player-stats-soccer aerials-won="1" touches="25">
+                  <stats-soccer-offensive shots-total="1"
+                                          shots-on-goal-total="1"
+                                          crosses-18-yard="1"
+                                          passes-total="20"
+                                          passes-complete="18"
+                                          passes-incomplete="2"
+                                          passes-complete-3rd-final="4"
+                                          passes-complete-long="2"/>
+                  <stats-soccer-defensive goals-against-total="1" interceptions="1"/>
+                  <stats-soccer-foul/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.8859">
+            <player-metadata player-key="p.8859"
+                             position-regular="midfielder"
+                             uniform-number="33"
+                             status="starter">
+               <name first="Marco"
+                     last="Donadel"
+                     full="Marco Donadel"
+                     abbreviation="Donadel"/>
+               <player-metadata-soccer line-formation-position="4"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="6" touches="87">
+                  <stats-soccer-offensive shots-total="1"
+                                          shots-on-goal-total="1"
+                                          free-kicks="1"
+                                          passes-total="59"
+                                          passes-complete="53"
+                                          passes-incomplete="6"
+                                          passes-complete-3rd-final="15"
+                                          passes-complete-long="13"
+                                          tackles-total="2"
+                                          tackles-won="1"
+                                          tackles-lost="1"/>
+                  <stats-soccer-defensive goals-against-total="2" clearances-successful="1" interceptions="5"/>
+                  <stats-soccer-foul fouls-commited="2" fouls-suffered="2"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.55409">
+            <player-metadata player-key="p.55409"
+                             position-regular="midfielder"
+                             uniform-number="15"
+                             status="starter">
+               <name first="Andrés"
+                     last="Romero"
+                     full="Andrés Romero"
+                     abbreviation="Romero"/>
+               <player-metadata-soccer line-formation-position="7"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer touches="57">
+                  <stats-soccer-offensive shots-total="3"
+                                          shots-on-goal-total="1"
+                                          shots-off-goal-total="2"
+                                          crosses-18-yard="1"
+                                          passes-total="35"
+                                          passes-complete="26"
+                                          passes-incomplete="9"
+                                          passes-complete-3rd-final="15"
+                                          passes-complete-long="1"
+                                          tackles-total="2"
+                                          tackles-won="2"
+                                          tackles-lost="0"/>
+                  <stats-soccer-defensive goals-against-total="2"/>
+                  <stats-soccer-foul fouls-commited="3" fouls-suffered="1" cautions-total="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.37996">
+            <player-metadata player-key="p.37996"
+                             position-regular="midfielder"
+                             uniform-number="10"
+                             status="starter">
+               <name first="Ignacio"
+                     last="Piatti"
+                     full="Ignacio Piatti"
+                     abbreviation="Piatti"/>
+               <player-metadata-soccer line-formation-position="10"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer touches="51">
+                  <stats-soccer-offensive goals-total="1"
+                                          goals-left-foot="0"
+                                          goals-right-foot="0"
+                                          goals-head="0"
+                                          shots-total="4"
+                                          shots-on-goal-total="3"
+                                          shots-off-goal-total="1"
+                                          crosses-18-yard-plus="1"
+                                          shots-penalty-shot-scored="1"
+                                          shots-penalty-shot-missed="0"
+                                          shots-penalty-shot-missed-target="0"
+                                          shots-penalty-shot-missed-post="0"
+                                          passes-total="30"
+                                          passes-complete="23"
+                                          passes-incomplete="7"
+                                          passes-complete-3rd-final="12"
+                                          passes-complete-long="2"
+                                          tackles-total="1"
+                                          tackles-won="1"
+                                          tackles-lost="0"/>
+                  <stats-soccer-defensive goals-against-total="2"/>
+                  <stats-soccer-foul fouls-suffered="2"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.78018">
+            <player-metadata player-key="p.78018"
+                             position-regular="midfielder"
+                             uniform-number="11"
+                             status="starter">
+               <name first="Dilly" last="Duka" full="Dilly Duka" abbreviation="Duka"/>
+               <player-metadata-soccer line-formation-position="11"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="83">
+               <player-stats-soccer touches="40">
+                  <stats-soccer-offensive shots-total="2"
+                                          shots-on-goal-total="1"
+                                          shots-off-goal-total="1"
+                                          crosses-18-yard="1"
+                                          passes-total="27"
+                                          passes-complete="19"
+                                          passes-incomplete="8"
+                                          passes-complete-3rd-final="10"
+                                          passes-complete-long="1"
+                                          tackles-total="1"
+                                          tackles-won="1"
+                                          tackles-lost="0"/>
+                  <stats-soccer-defensive goals-against-total="2"/>
+                  <stats-soccer-foul fouls-commited="2" fouls-suffered="3"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.82464">
+            <player-metadata player-key="p.82464"
+                             position-regular="forward"
+                             uniform-number="99"
+                             status="starter">
+               <name first="Jack"
+                     last="McInerney"
+                     full="Jack McInerney"
+                     abbreviation="McInerney"/>
+               <player-metadata-soccer line-formation-position="9"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="1" touches="29">
+                  <stats-soccer-offensive shots-total="1"
+                                          shots-on-goal-total="1"
+                                          crosses-18-yard="3"
+                                          passes-total="19"
+                                          passes-complete="16"
+                                          passes-incomplete="3"
+                                          passes-complete-3rd-final="5"
+                                          passes-complete-long="2"/>
+                  <stats-soccer-defensive goals-against-total="2" interceptions="1"/>
+                  <stats-soccer-foul fouls-commited="1" fouls-suffered="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.164480">
+            <player-metadata player-key="p.164480"
+                             position-regular="defender"
+                             uniform-number="3"
+                             status="bench">
+               <name first="Eric"
+                     last="Miller"
+                     full="Eric Miller"
+                     abbreviation="Miller"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          time-played-total="2">
+               <player-stats-soccer touches="3">
+                  <stats-soccer-offensive crosses-18-yard="1" crosses-18-yard-plus="1"/>
+                  <stats-soccer-defensive goals-against-total="0" clearances-successful="1"/>
+                  <stats-soccer-foul/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.41466">
+            <player-metadata player-key="p.41466"
+                             position-regular="midfielder"
+                             uniform-number="5"
+                             status="bench">
+               <name first="Bakary"
+                     last="Soumaré"
+                     full="Bakary Soumaré"
+                     abbreviation="Soumaré"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+         </player>
+         <player id="p.41633">
+            <player-metadata player-key="p.41633"
+                             position-regular="forward"
+                             uniform-number="7"
+                             status="bench">
+               <name first="Dominic"
+                     last="Oduro"
+                     full="Dominic Oduro"
+                     abbreviation="Oduro"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          time-played-total="27">
+               <player-stats-soccer touches="10">
+                  <stats-soccer-offensive shots-total="1"
+                                          shots-off-goal-total="1"
+                                          passes-total="8"
+                                          passes-complete="7"
+                                          passes-incomplete="1"
+                                          passes-complete-3rd-final="3"
+                                          passes-complete-long="1"/>
+                  <stats-soccer-defensive goals-against-total="1"/>
+                  <stats-soccer-foul/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.14668">
+            <player-metadata player-key="p.14668"
+                             position-regular="midfielder"
+                             uniform-number="14"
+                             status="bench">
+               <name first="Nigel"
+                     last="Reo-Coker"
+                     full="Nigel Reo-Coker"
+                     abbreviation="Reo-Coker"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+         </player>
+         <player id="p.41540">
+            <player-metadata player-key="p.41540"
+                             position-regular="goalkeeper"
+                             uniform-number="22"
+                             status="bench">
+               <name first="Eric"
+                     last="Kronberg"
+                     full="Eric Kronberg"
+                     abbreviation="Kronberg"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+         </player>
+         <player id="p.184610">
+            <player-metadata player-key="p.184610"
+                             position-regular="forward"
+                             uniform-number="24"
+                             status="bench">
+               <name first="Anthony"
+                     last="Jackson-Hamel"
+                     full="Anthony Jackson-Hamel"
+                     abbreviation="Jackson-Hamel"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          time-played-total="7">
+               <player-stats-soccer>
+                  <stats-soccer-offensive/>
+                  <stats-soccer-defensive goals-against-total="0"/>
+                  <stats-soccer-foul/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.153577">
+            <player-metadata player-key="p.153577"
+                             position-regular="defender"
+                             uniform-number="55"
+                             status="bench">
+               <name first="Wandrille"
+                     last="Lefevre"
+                     full="Wandrille Lefevre"
+                     abbreviation="Lefevre"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+         </player>
+         <associate id="man40797">
+            <associate-metadata position="Manager"
+                                position-source="optasports.com"
+                                associate-key="man40797">
+               <name first="Frank"
+                     last="Klopas"
+                     full="Frank Klopas"
+                     abbreviation="Klopas"/>
+            </associate-metadata>
+         </associate>
+      </team>
+      <team id="e.791551-t.9668">
+         <team-metadata team-key="t.9668" alignment="away">
+            <name first="New York City FC"
+                  full="New York City FC"
+                  abbreviation="New York City FC"
+                  nickname="New York City FC"/>
+         </team-metadata>
+         <team-stats score="2"
+                     score-opposing="1"
+                     event-outcome="win"
+                     time-of-possession-percentage="45.5">
+            <sub-score period-value="1" score="1"/>
+            <sub-score period-value="2" score="1"/>
+            <team-stats-soccer line-formation="4222">
+               <stats-soccer-offensive shots-total="5" shots-on-goal-total="3" corner-kicks="3"/>
+               <stats-soccer-foul fouls-commited="18"/>
+            </team-stats-soccer>
+         </team-stats>
+         <player id="p.56790">
+            <player-metadata player-key="p.56790"
+                             position-regular="goalkeeper"
+                             uniform-number="12"
+                             status="starter">
+               <name first="Josh"
+                     last="Saunders"
+                     full="Josh Saunders"
+                     abbreviation="Saunders"/>
+               <player-metadata-soccer line-formation-position="1"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer touches="48">
+                  <stats-soccer-offensive passes-total="35"
+                                          passes-complete="12"
+                                          passes-incomplete="23"
+                                          passes-complete-3rd-final="1"
+                                          passes-complete-long="11"/>
+                  <stats-soccer-defensive goals-against-total="1"
+                                          goals-penalty-shot-allowed="1"
+                                          shots-penalty-shot-allowed="1"
+                                          interceptions="1"
+                                          saves="8"
+                                          save-percentage="0.889"/>
+                  <stats-soccer-foul/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.110557">
+            <player-metadata player-key="p.110557"
+                             position-regular="defender"
+                             uniform-number="27"
+                             status="starter">
+               <name first="RJ" last="Allen" full="RJ Allen" abbreviation="Allen"/>
+               <player-metadata-soccer line-formation-position="2"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="2" touches="65">
+                  <stats-soccer-offensive crosses-18-yard="1"
+                                          passes-total="42"
+                                          passes-complete="38"
+                                          passes-incomplete="4"
+                                          passes-complete-3rd-final="4"
+                                          passes-complete-long="2"
+                                          tackles-total="4"
+                                          tackles-won="4"
+                                          tackles-lost="0"/>
+                  <stats-soccer-defensive goals-against-total="1" clearances-successful="1" interceptions="5"/>
+                  <stats-soccer-foul fouls-commited="2" fouls-suffered="1" cautions-total="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.82703">
+            <player-metadata player-key="p.82703"
+                             position-regular="defender"
+                             uniform-number="3"
+                             status="starter">
+               <name first="Kwame"
+                     last="Watson-Siriboe"
+                     full="Kwame Watson-Siriboe"
+                     abbreviation="Watson-Siriboe"/>
+               <player-metadata-soccer line-formation-position="5"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="5" touches="47">
+                  <stats-soccer-offensive passes-total="26"
+                                          passes-complete="25"
+                                          passes-incomplete="1"
+                                          passes-complete-long="3"
+                                          tackles-total="1"
+                                          tackles-won="1"
+                                          tackles-lost="0"/>
+                  <stats-soccer-defensive goals-against-total="1"
+                                          shots-blocked-outfielder="1"
+                                          clearances-successful="10"
+                                          interceptions="8"/>
+                  <stats-soccer-foul fouls-commited="4"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.105678">
+            <player-metadata player-key="p.105678"
+                             position-regular="defender"
+                             uniform-number="24"
+                             status="starter">
+               <name first="Shay"
+                     last="Facey"
+                     full="Shay Facey"
+                     abbreviation="Facey"/>
+               <player-metadata-soccer line-formation-position="6"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer touches="38">
+                  <stats-soccer-offensive passes-total="19"
+                                          passes-complete="18"
+                                          passes-incomplete="1"
+                                          passes-complete-3rd-final="1"
+                                          passes-complete-long="3"/>
+                  <stats-soccer-defensive goals-against-total="1"
+                                          shots-blocked-outfielder="3"
+                                          clearances-successful="8"
+                                          interceptions="4"/>
+                  <stats-soccer-foul fouls-suffered="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.41606">
+            <player-metadata player-key="p.41606"
+                             position-regular="defender"
+                             uniform-number="17"
+                             status="starter">
+               <name first="Chris"
+                     last="Wingert"
+                     full="Chris Wingert"
+                     abbreviation="Wingert"/>
+               <player-metadata-soccer line-formation-position="3"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="3" touches="61">
+                  <stats-soccer-offensive passes-total="39"
+                                          passes-complete="32"
+                                          passes-incomplete="7"
+                                          passes-complete-3rd-final="7"
+                                          passes-complete-long="3"
+                                          tackles-total="4"
+                                          tackles-won="3"
+                                          tackles-lost="1"/>
+                  <stats-soccer-defensive goals-against-total="1"
+                                          shots-blocked-outfielder="1"
+                                          clearances-successful="3"
+                                          interceptions="3"/>
+                  <stats-soccer-foul fouls-commited="1" fouls-suffered="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.33242">
+            <player-metadata player-key="p.33242"
+                             position-regular="midfielder"
+                             uniform-number="88"
+                             status="starter">
+               <name first="Kwadwo"
+                     last="Poku"
+                     full="Kwadwo Poku"
+                     abbreviation="Poku"/>
+               <player-metadata-soccer line-formation-position="4"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="83">
+               <player-stats-soccer aerials-won="1" touches="54">
+                  <stats-soccer-offensive shots-total="1"
+                                          shots-off-goal-total="1"
+                                          passes-total="42"
+                                          passes-complete="35"
+                                          passes-incomplete="7"
+                                          passes-complete-3rd-final="8"
+                                          passes-complete-long="3"
+                                          tackles-total="1"
+                                          tackles-won="1"
+                                          tackles-lost="0"/>
+                  <stats-soccer-defensive goals-against-total="1" interceptions="1"/>
+                  <stats-soccer-foul fouls-commited="3" cautions-total="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.49839">
+            <player-metadata player-key="p.49839"
+                             position-regular="midfielder"
+                             uniform-number="4"
+                             status="starter">
+               <name first="Andrew"
+                     last="Jacobson"
+                     full="Andrew Jacobson"
+                     abbreviation="Jacobson"/>
+               <player-metadata-soccer line-formation-position="8"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="2" touches="54">
+                  <stats-soccer-offensive passes-total="33"
+                                          passes-complete="26"
+                                          passes-incomplete="7"
+                                          passes-complete-3rd-final="5"
+                                          tackles-total="4"
+                                          tackles-won="2"
+                                          tackles-lost="2"/>
+                  <stats-soccer-defensive goals-against-total="1" clearances-successful="5" interceptions="7"/>
+                  <stats-soccer-foul/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.41682">
+            <player-metadata player-key="p.41682"
+                             position-regular="midfielder"
+                             uniform-number="20"
+                             status="starter">
+               <name first="Mehdi"
+                     last="Ballouchy"
+                     full="Mehdi Ballouchy"
+                     abbreviation="Ballouchy"/>
+               <player-metadata-soccer line-formation-position="7"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="65">
+               <player-stats-soccer touches="34">
+                  <stats-soccer-offensive crosses-18-yard="2"
+                                          passes-total="25"
+                                          passes-complete="21"
+                                          passes-incomplete="4"
+                                          passes-complete-3rd-final="5"
+                                          passes-complete-long="1"
+                                          tackles-total="2"
+                                          tackles-won="0"
+                                          tackles-lost="2"/>
+                  <stats-soccer-defensive goals-against-total="0" clearances-successful="1"/>
+                  <stats-soccer-foul fouls-suffered="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.177930">
+            <player-metadata player-key="p.177930"
+                             position-regular="midfielder"
+                             uniform-number="15"
+                             status="starter">
+               <name first="Thomas"
+                     last="McNamara"
+                     full="Thomas McNamara"
+                     abbreviation="McNamara"/>
+               <player-metadata-soccer line-formation-position="11"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer aerials-won="1" touches="52">
+                  <stats-soccer-offensive shots-total="1"
+                                          shots-on-goal-total="1"
+                                          passes-total="39"
+                                          passes-complete="32"
+                                          passes-incomplete="7"
+                                          passes-complete-3rd-final="7"
+                                          passes-complete-long="1"
+                                          tackles-total="2"
+                                          tackles-won="1"
+                                          tackles-lost="1"/>
+                  <stats-soccer-defensive goals-against-total="1" clearances-successful="4"/>
+                  <stats-soccer-foul fouls-commited="2" fouls-suffered="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.116661">
+            <player-metadata player-key="p.116661"
+                             position-regular="forward"
+                             uniform-number="14"
+                             status="starter">
+               <name first="Patrick"
+                     last="Mullins"
+                     full="Patrick Mullins"
+                     abbreviation="Mullins"/>
+               <player-metadata-soccer line-formation-position="10"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="80">
+               <player-stats-soccer aerials-won="4" touches="34">
+                  <stats-soccer-offensive crosses-18-yard="1"
+                                          assists-total="1"
+                                          passes-total="18"
+                                          passes-complete="10"
+                                          passes-incomplete="8"
+                                          passes-complete-3rd-final="4"
+                                          passes-complete-long="1"/>
+                  <stats-soccer-defensive goals-against-total="1" interceptions="1"/>
+                  <stats-soccer-foul fouls-commited="1" fouls-suffered="2" cautions-total="1"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.17279">
+            <player-metadata player-key="p.17279"
+                             position-regular="forward"
+                             uniform-number="7"
+                             status="starter">
+               <name first="David"
+                     last="Villa"
+                     full="David Villa"
+                     abbreviation="Villa"/>
+               <player-metadata-soccer line-formation-position="9"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          events-started="1"
+                          time-played-total="90">
+               <player-stats-soccer touches="54">
+                  <stats-soccer-offensive goals-total="2"
+                                          goals-left-foot="0"
+                                          goals-right-foot="0"
+                                          goals-head="0"
+                                          shots-total="2"
+                                          shots-on-goal-total="2"
+                                          crosses-18-yard="2"
+                                          free-kicks="1"
+                                          passes-total="33"
+                                          passes-complete="28"
+                                          passes-incomplete="5"
+                                          passes-complete-3rd-final="13"
+                                          passes-complete-long="2"/>
+                  <stats-soccer-defensive goals-against-total="1" clearances-successful="1" interceptions="1"/>
+                  <stats-soccer-foul fouls-commited="1" fouls-suffered="4"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.41491">
+            <player-metadata player-key="p.41491"
+                             position-regular="midfielder"
+                             uniform-number="11"
+                             status="bench">
+               <name first="Ned"
+                     last="Grabavoy"
+                     full="Ned Grabavoy"
+                     abbreviation="Grabavoy"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          time-played-total="25">
+               <player-stats-soccer touches="6">
+                  <stats-soccer-offensive passes-total="5"
+                                          passes-complete="5"
+                                          passes-incomplete="0"
+                                          passes-complete-3rd-final="2"/>
+                  <stats-soccer-defensive goals-against-total="1" shots-blocked-outfielder="1"/>
+                  <stats-soccer-foul/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.110609">
+            <player-metadata player-key="p.110609"
+                             position-regular="goalkeeper"
+                             uniform-number="18"
+                             status="bench">
+               <name first="Ryan"
+                     last="Meara"
+                     full="Ryan Meara"
+                     abbreviation="Meara"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+         </player>
+         <player id="p.200192">
+            <player-metadata player-key="p.200192"
+                             position-regular="forward"
+                             uniform-number="19"
+                             status="bench">
+               <name first="Khiry"
+                     last="Shelton"
+                     full="Khiry Shelton"
+                     abbreviation="Shelton"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+         </player>
+         <player id="p.37802">
+            <player-metadata player-key="p.37802"
+                             position-regular="midfielder"
+                             uniform-number="22"
+                             status="bench">
+               <name first="Pablo"
+                     last="Alvarez Nunez"
+                     full="Pablo Álvarez"
+                     abbreviation="Alvarez Nunez"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          time-played-total="10">
+               <player-stats-soccer touches="5">
+                  <stats-soccer-offensive passes-total="4"
+                                          passes-complete="3"
+                                          passes-incomplete="1"
+                                          passes-complete-3rd-final="1"/>
+                  <stats-soccer-defensive goals-against-total="0"/>
+                  <stats-soccer-foul/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <player id="p.45692">
+            <player-metadata player-key="p.45692"
+                             position-regular="forward"
+                             uniform-number="32"
+                             status="bench">
+               <name first="Adam"
+                     last="Nemec"
+                     full="Adam Nemec"
+                     abbreviation="Nemec"/>
+               <player-metadata-soccer line-formation-position="0"/>
+            </player-metadata>
+            <player-stats team-coverage="single-team"
+                          date-coverage-type="event"
+                          time-played-total="7">
+               <player-stats-soccer touches="4">
+                  <stats-soccer-offensive passes-total="4"
+                                          passes-complete="3"
+                                          passes-incomplete="1"
+                                          passes-complete-3rd-final="2"
+                                          passes-complete-long="1"/>
+                  <stats-soccer-defensive goals-against-total="0"/>
+                  <stats-soccer-foul fouls-commited="4"/>
+               </player-stats-soccer>
+            </player-stats>
+         </player>
+         <associate id="man37546">
+            <associate-metadata position="Manager"
+                                position-source="optasports.com"
+                                associate-key="man37546">
+               <name first="Jason"
+                     last="Kreis"
+                     full="Jason Kreis"
+                     abbreviation="Kreis"/>
+            </associate-metadata>
+         </associate>
+      </team>
+      <officials>
+         <official>
+            <official-metadata official-key="PO40775" position="main-official">
+               <name first="Jorge"
+                     last="Gonzalez"
+                     full="Jorge Gonzalez"
+                     abbreviation="Gonzalez"/>
+            </official-metadata>
+         </official>
+      </officials>
+      <event-actions>
+         <event-actions-soccer>
+            <action-soccer-penalty id="a.2035958111"
+                                   sequence-number="0705023339"
+                                   minutes-elapsed="69"
+                                   period-value="2"
+                                   team-idref="e.791551-t.1616"
+                                   recipient-type="player"
+                                   recipient-idref="p.42584"
+                                   penalty-level="yellow-card"
+                                   penalty-type="foul"/>
+            <action-soccer-penalty id="a.1626443014"
+                                   sequence-number="0705025739"
+                                   minutes-elapsed="93"
+                                   period-value="2"
+                                   team-idref="e.791551-t.1616"
+                                   recipient-type="player"
+                                   recipient-idref="p.55409"
+                                   penalty-level="yellow-card"
+                                   penalty-type="diving"/>
+            <action-soccer-score id="a.339226142"
+                                 sequence-number="0705024208"
+                                 period-value="2"
+                                 team-idref="e.791551-t.1616"
+                                 score-attempt-type="penalty"
+                                 minutes-elapsed="77">
+               <action-soccer-play-participant player-idref="PO37996" team-idref="e.791551-t.1616" role="scorer"/>
+            </action-soccer-score>
+            <action-soccer-substitution id="a.1043715020"
+                                        sequence-number="0705022804"
+                                        minutes-elapsed="63"
+                                        period-value="2"
+                                        team-idref="e.791551-t.1616"
+                                        person-replacing-position="forward"
+                                        person-original-idref="PO110606"
+                                        person-replacing-idref="PO41633"
+                                        substitution-reason="Tactical"/>
+            <action-soccer-substitution id="a.1505365296"
+                                        sequence-number="0705024815"
+                                        minutes-elapsed="83"
+                                        period-value="2"
+                                        team-idref="e.791551-t.1616"
+                                        person-replacing-position="forward"
+                                        person-original-idref="PO78018"
+                                        person-replacing-idref="PO184610"
+                                        substitution-reason="Tactical"/>
+            <action-soccer-substitution id="a.1538926323"
+                                        sequence-number="0705025249"
+                                        minutes-elapsed="88"
+                                        period-value="2"
+                                        team-idref="e.791551-t.1616"
+                                        person-replacing-position="defender"
+                                        person-original-idref="PO96201"
+                                        person-replacing-idref="PO164480"
+                                        substitution-reason="Tactical"/>
+            <action-soccer-penalty id="a.199719037"
+                                   sequence-number="0705015319"
+                                   minutes-elapsed="46"
+                                   period-value="1"
+                                   team-idref="e.791551-t.9668"
+                                   recipient-type="player"
+                                   recipient-idref="p.33242"
+                                   penalty-level="yellow-card"
+                                   penalty-type="other"/>
+            <action-soccer-penalty id="a.555598898"
+                                   sequence-number="0705021814"
+                                   minutes-elapsed="53"
+                                   period-value="2"
+                                   team-idref="e.791551-t.9668"
+                                   recipient-type="player"
+                                   recipient-idref="p.116661"
+                                   penalty-level="yellow-card"
+                                   penalty-type="foul"/>
+            <action-soccer-penalty id="a.767008014"
+                                   sequence-number="0705022548"
+                                   minutes-elapsed="61"
+                                   period-value="2"
+                                   team-idref="e.791551-t.9668"
+                                   recipient-type="player"
+                                   recipient-idref="p.110557"
+                                   penalty-level="yellow-card"
+                                   penalty-type="delaying-restart"/>
+            <action-soccer-score id="a.1489095126"
+                                 sequence-number="0705014208"
+                                 period-value="1"
+                                 team-idref="e.791551-t.9668"
+                                 score-attempt-type="regular"
+                                 minutes-elapsed="34">
+               <action-soccer-play-participant player-idref="PO17279" team-idref="e.791551-t.9668" role="scorer"/>
+               <action-soccer-play-participant player-idref="PO116661" team-idref="e.791551-t.9668" role="assist"/>
+            </action-soccer-score>
+            <action-soccer-score id="a.1472050460"
+                                 sequence-number="0705024711"
+                                 period-value="2"
+                                 team-idref="e.791551-t.9668"
+                                 score-attempt-type="regular"
+                                 minutes-elapsed="82">
+               <action-soccer-play-participant player-idref="PO17279" team-idref="e.791551-t.9668" role="scorer"/>
+            </action-soccer-score>
+            <action-soccer-substitution id="a.1877525110"
+                                        sequence-number="0705023016"
+                                        minutes-elapsed="65"
+                                        period-value="2"
+                                        team-idref="e.791551-t.9668"
+                                        person-replacing-position="midfielder"
+                                        person-original-idref="PO41682"
+                                        person-replacing-idref="PO41491"
+                                        substitution-reason="Tactical"/>
+            <action-soccer-substitution id="a.956740208"
+                                        sequence-number="0705024442"
+                                        minutes-elapsed="80"
+                                        period-value="2"
+                                        team-idref="e.791551-t.9668"
+                                        person-replacing-position="midfielder"
+                                        person-original-idref="PO116661"
+                                        person-replacing-idref="PO37802"
+                                        substitution-reason="Tactical"/>
+            <action-soccer-substitution id="a.496410434"
+                                        sequence-number="0705024825"
+                                        minutes-elapsed="83"
+                                        period-value="2"
+                                        team-idref="e.791551-t.9668"
+                                        person-replacing-position="forward"
+                                        person-original-idref="PO33242"
+                                        person-replacing-idref="PO45692"
+                                        substitution-reason="Tactical"/>
+         </event-actions-soccer>
+      </event-actions>
+   </sports-event>
+</sports-content>

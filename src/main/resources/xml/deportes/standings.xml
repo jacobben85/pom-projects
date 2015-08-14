@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sports-content>
+
+<sports-content xmlns:exsl="http://exslt.org/common" xmlns:bbc="http://www.bbc.co.uk/sport/sports-data" path-id="soccer/l.eredivisie.nl/standings/xt.opta.standings-20150812162349-2015">
+  <sports-metadata date-time="2015-08-12T16:23:49+01:00" doc-id="xt.opta.standings-20150812162349-2015" language="en-US" fixture-key="standings" document-class="standings" fixture-name="Standings">
+    <sports-title />
+    <sports-content-codes>
+      <sports-content-code code-name="Opta" code-key="optasports.com" code-type="publisher" />
+      <sports-content-code code-name="XML Team Solutions, Inc." code-key="xmlteam.com" code-type="distributor" />
+      <sports-content-code code-type="sport" code-key="15054000" code-name="Soccer" />
+      <sports-content-code code-type="tournament" code-key="CFBB9" code-name="Dutch Eredivisie" code-source="bbc.co.uk" />
+      <sports-content-code code-type="league" code-key="l.eredivisie.nl" code-name="Dutch Eredivisie" code-source="xmlteam.com" />
+      <sports-content-code code-type="season" code-key="2015" />
+    </sports-content-codes>
+  </sports-metadata>
+  <tournament>
+    <tournament-metadata date-coverage-type="tournament" date-coverage-value="2015" tournament-key="CFBB9">
+      <name first="Dutch Eredivisie" full="Dutch Eredivisie" abbreviation="Dutch Eredivisie" bbc:vide-code="Dutch Eredivisie" />
+    </tournament-metadata>
+    <tournament-stage>
+      <tournament-stage-metadata stage-key="CFBB92015S1" stage-name="Season" stage-number="1" stage-type="single-group" maximum-round-number="1" minimum-round-number="1">
+        <name first="Dutch Eredivisie" full="Dutch Eredivisie" abbreviation="Dutch Eredivisie" bbc:vide-code="Dutch Eredivisie" />
+      </tournament-stage-metadata>
+      <tournament-round>
+        <tournament-round-metadata round-key="CFBB92015S1R1" round-number="1" round-type="home-and-home">
+          <name first="Dutch Eredivisie" full="Dutch Eredivisie" abbreviation="Dutch Eredivisie" bbc:vide-code="Dutch Eredivisie" />
+        </tournament-round-metadata>
+        <standing>
+          <standing-metadata stats-coverage="expanded" team-coverage="multi-team" date-coverage-type="season-regular" date-coverage-value="2015-08-12" competition-scope="tournament">
+            <sports-property formal-name="match-day" value="1" />
+          </standing-metadata>
+          <team>
+            <team-metadata team-key="TFBB215" alignment="none">
+              <name first="Ajax" full="Ajax" abbreviation="Ajax" nickname="Ajax" bbc:vide-code="Ajax" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="3" wins="1" losses="0" ties="0" points-scored-for="3" points-scored-against="0" points-difference="3" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="1" standing-points="3" wins="1" losses="0" ties="0" points-scored-for="3" points-scored-against="0" />
+              <award award-type="league-championship-winner" name="Champions_League" />
+              <rank type="events-all" value="1" />
+              <rank type="events-home" value="6" />
+              <rank type="events-away" value="1" />
+              <rank type="rank-previous" value="1" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB322" alignment="none">
+              <name first="Roda JC Kerkrade" full="Roda JC Kerkrade" abbreviation="Roda JC Kerkrade" nickname="Roda JC Kerkrade" bbc:vide-code="Roda JC Kerkrade" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="3" wins="1" losses="0" ties="0" points-scored-for="3" points-scored-against="1" points-difference="2" />
+              <outcome-totals alignment-scope="events-home" events-played="1" standing-points="3" wins="1" losses="0" ties="0" points-scored-for="3" points-scored-against="1" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <award award-type="league-championship-runner-up" name="Champions_League_Qualifying" />
+              <rank type="events-all" value="2" />
+              <rank type="events-home" value="1" />
+              <rank type="events-away" value="12" />
+              <rank type="rank-previous" value="2" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB318" alignment="none">
+              <name first="sc Heerenveen" full="sc Heerenveen" abbreviation="sc Heerenveen" nickname="sc Heerenveen" bbc:vide-code="sc Heerenveen" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="3" wins="1" losses="0" ties="0" points-scored-for="3" points-scored-against="1" points-difference="2" />
+              <outcome-totals alignment-scope="events-home" events-played="1" standing-points="3" wins="1" losses="0" ties="0" points-scored-for="3" points-scored-against="1" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <award award-type="league-championship-runner-up" name="Europa_Cup" />
+              <rank type="events-all" value="3" />
+              <rank type="events-home" value="2" />
+              <rank type="events-away" value="15" />
+              <rank type="rank-previous" value="3" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB198" alignment="none">
+              <name first="Feyenoord" full="Feyenoord" abbreviation="Feyenoord" nickname="Feyenoord" bbc:vide-code="Feyenoord" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="3" wins="1" losses="0" ties="0" points-scored-for="3" points-scored-against="2" points-difference="1" />
+              <outcome-totals alignment-scope="events-home" events-played="1" standing-points="3" wins="1" losses="0" ties="0" points-scored-for="3" points-scored-against="2" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <award award-type="" name="Europa_Cup" />
+              <rank type="events-all" value="4" />
+              <rank type="events-home" value="3" />
+              <rank type="events-away" value="9" />
+              <rank type="rank-previous" value="4" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB701" alignment="none">
+              <name first="ADO Den Haag" full="ADO Den Haag" abbreviation="ADO Den Haag" nickname="ADO Den Haag" bbc:vide-code="ADO Den Haag" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="1" wins="0" losses="0" ties="1" points-scored-for="2" points-scored-against="2" points-difference="0" />
+              <outcome-totals alignment-scope="events-home" events-played="1" standing-points="1" wins="0" losses="0" ties="1" points-scored-for="2" points-scored-against="2" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <award award-type="" name="Europa_Cup" />
+              <rank type="events-all" value="5" />
+              <rank type="events-home" value="4" />
+              <rank type="events-away" value="4" />
+              <rank type="rank-previous" value="5" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB204" alignment="none">
+              <name first="PSV" full="PSV" abbreviation="PSV" nickname="PSV" bbc:vide-code="PSV" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="1" wins="0" losses="0" ties="1" points-scored-for="2" points-scored-against="2" points-difference="0" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="1" standing-points="1" wins="0" losses="0" ties="1" points-scored-for="2" points-scored-against="2" />
+              <award award-type="" name="Europa_Cup" />
+              <rank type="events-all" value="6" />
+              <rank type="events-home" value="15" />
+              <rank type="events-away" value="2" />
+              <rank type="rank-previous" value="6" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB232" alignment="none">
+              <name first="Vitesse" full="Vitesse" abbreviation="Vitesse" nickname="Vitesse" bbc:vide-code="Vitesse" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="1" wins="0" losses="0" ties="1" points-scored-for="1" points-scored-against="1" points-difference="0" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="1" standing-points="1" wins="0" losses="0" ties="1" points-scored-for="1" points-scored-against="1" />
+              <award award-type="" name="Europa_Cup" />
+              <rank type="events-all" value="7" />
+              <rank type="events-home" value="17" />
+              <rank type="events-away" value="3" />
+              <rank type="rank-previous" value="7" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB207" alignment="none">
+              <name first="Willem II" full="Willem II" abbreviation="Willem II" nickname="Willem II" bbc:vide-code="Willem II" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="1" wins="0" losses="0" ties="1" points-scored-for="1" points-scored-against="1" points-difference="0" />
+              <outcome-totals alignment-scope="events-home" events-played="1" standing-points="1" wins="0" losses="0" ties="1" points-scored-for="1" points-scored-against="1" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <rank type="events-all" value="8" />
+              <rank type="events-home" value="5" />
+              <rank type="events-away" value="14" />
+              <rank type="rank-previous" value="8" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB539" alignment="none">
+              <name first="Excelsior" full="Excelsior" abbreviation="Excelsior" nickname="Excelsior" bbc:vide-code="Excelsior" />
+            </team-metadata>
+            <team-stats events-played="0">
+              <outcome-totals alignment-scope="events-all" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" points-difference="0" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <rank type="events-all" value="9" />
+              <rank type="events-home" value="8" />
+              <rank type="events-away" value="6" />
+              <rank type="rank-previous" value="9" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB425" alignment="none">
+              <name first="FC Groningen" full="FC Groningen" abbreviation="FC Groningen" nickname="FC Groningen" bbc:vide-code="FC Groningen" />
+            </team-metadata>
+            <team-stats events-played="0">
+              <outcome-totals alignment-scope="events-all" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" points-difference="0" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <rank type="events-all" value="10" />
+              <rank type="events-home" value="9" />
+              <rank type="events-away" value="7" />
+              <rank type="rank-previous" value="10" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB324" alignment="none">
+              <name first="FC Twente" full="FC Twente" abbreviation="FC Twente" nickname="FC Twente" bbc:vide-code="FC Twente" />
+            </team-metadata>
+            <team-stats events-played="0">
+              <outcome-totals alignment-scope="events-all" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" points-difference="0" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <rank type="events-all" value="11" />
+              <rank type="events-home" value="10" />
+              <rank type="events-away" value="8" />
+              <rank type="rank-previous" value="11" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB320" alignment="none">
+              <name first="N.E.C." full="N.E.C." abbreviation="N.E.C." nickname="N.E.C." bbc:vide-code="N.E.C." />
+            </team-metadata>
+            <team-stats events-played="0">
+              <outcome-totals alignment-scope="events-all" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" points-difference="0" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <rank type="events-all" value="12" />
+              <rank type="events-home" value="13" />
+              <rank type="events-away" value="10" />
+              <rank type="rank-previous" value="12" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB424" alignment="none">
+              <name first="PEC Zwolle" full="PEC Zwolle" abbreviation="PEC Zwolle" nickname="PEC Zwolle" bbc:vide-code="PEC Zwolle" />
+            </team-metadata>
+            <team-stats events-played="0">
+              <outcome-totals alignment-scope="events-all" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" points-difference="0" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <rank type="events-all" value="13" />
+              <rank type="events-home" value="14" />
+              <rank type="events-away" value="11" />
+              <rank type="rank-previous" value="13" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB314" alignment="none">
+              <name first="SC Cambuur Leeuwarden" full="SC Cambuur Leeuwarden" abbreviation="SC Cambuur Leeuwarden" nickname="SC Cambuur Leeuwarden" bbc:vide-code="SC Cambuur Leeuwarden" />
+            </team-metadata>
+            <team-stats events-played="0">
+              <outcome-totals alignment-scope="events-all" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" points-difference="0" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <rank type="events-all" value="14" />
+              <rank type="events-home" value="16" />
+              <rank type="events-away" value="13" />
+              <rank type="rank-previous" value="14" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB325" alignment="none">
+              <name first="FC Utrecht" full="FC Utrecht" abbreviation="FC Utrecht" nickname="FC Utrecht" bbc:vide-code="FC Utrecht" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="0" wins="0" losses="1" ties="0" points-scored-for="2" points-scored-against="3" points-difference="-1" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="1" standing-points="0" wins="0" losses="1" ties="0" points-scored-for="2" points-scored-against="3" />
+              <rank type="events-all" value="15" />
+              <rank type="events-home" value="11" />
+              <rank type="events-away" value="16" />
+              <rank type="rank-previous" value="15" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB317" alignment="none">
+              <name first="De Graafschap" full="De Graafschap" abbreviation="De Graafschap" nickname="De Graafschap" bbc:vide-code="De Graafschap" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="0" wins="0" losses="1" ties="0" points-scored-for="1" points-scored-against="3" points-difference="-2" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="1" standing-points="0" wins="0" losses="1" ties="0" points-scored-for="1" points-scored-against="3" />
+              <award award-type="playoff-relegation" name="Relegation" />
+              <rank type="events-all" value="16" />
+              <rank type="events-home" value="7" />
+              <rank type="events-away" value="17" />
+              <rank type="rank-previous" value="16" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB2038" alignment="none">
+              <name first="Heracles Almelo" full="Heracles Almelo" abbreviation="Heracles Almelo" nickname="Heracles Almelo" bbc:vide-code="Heracles Almelo" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="0" wins="0" losses="1" ties="0" points-scored-for="1" points-scored-against="3" points-difference="-2" />
+              <outcome-totals alignment-scope="events-home" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <outcome-totals alignment-scope="events-away" events-played="1" standing-points="0" wins="0" losses="1" ties="0" points-scored-for="1" points-scored-against="3" />
+              <award award-type="playoff-relegation" name="Relegation" />
+              <rank type="events-all" value="17" />
+              <rank type="events-home" value="12" />
+              <rank type="events-away" value="18" />
+              <rank type="rank-previous" value="17" />
+            </team-stats>
+          </team>
+          <team>
+            <team-metadata team-key="TFBB313" alignment="none">
+              <name first="AZ" full="AZ" abbreviation="AZ" nickname="AZ" bbc:vide-code="AZ" />
+            </team-metadata>
+            <team-stats events-played="1">
+              <outcome-totals alignment-scope="events-all" events-played="1" standing-points="0" wins="0" losses="1" ties="0" points-scored-for="0" points-scored-against="3" points-difference="-3" />
+              <outcome-totals alignment-scope="events-home" events-played="1" standing-points="0" wins="0" losses="1" ties="0" points-scored-for="0" points-scored-against="3" />
+              <outcome-totals alignment-scope="events-away" events-played="0" standing-points="0" wins="0" losses="0" ties="0" points-scored-for="0" points-scored-against="0" />
+              <award award-type="relegation" name="Relegation" />
+              <rank type="events-all" value="18" />
+              <rank type="events-home" value="18" />
+              <rank type="events-away" value="5" />
+              <rank type="rank-previous" value="18" />
+            </team-stats>
+          </team>
+        </standing>
+      </tournament-round>
+    </tournament-stage>
+  </tournament>
+</sports-content>
