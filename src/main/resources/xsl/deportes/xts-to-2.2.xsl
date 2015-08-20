@@ -54,7 +54,7 @@
     <xsl:template match="@revision-id"/>
 
     <!-- remove invalid s-c-c types -->
-    <xsl:template match="sports-content-code[@code-type='tournament']"/>
+    <!--<xsl:template match="sports-content-code[@code-type='tournament']"/>-->
     <xsl:template match="sports-content-code[@code-type='action-listing']"/>
     <xsl:template match="sports-content-code[@code-type='participant-event-listing']"/>
 

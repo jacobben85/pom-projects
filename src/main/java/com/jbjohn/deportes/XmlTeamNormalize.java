@@ -17,7 +17,7 @@ public class XmlTeamNormalize {
 
     public boolean process() {
 
-        InputStream xml1 = this.getClass().getClassLoader().getResourceAsStream("xml/deportes/standings.xml");
+        InputStream xml1 = this.getClass().getClassLoader().getResourceAsStream("xml/deportes/commentary.xml");
 
         InputStream xsl1 = this.getClass().getClassLoader().getResourceAsStream("xsl/deportes/bbc-to-xts.xsl");
         String response1 = transformer(xml1, xsl1, false);
@@ -28,7 +28,7 @@ public class XmlTeamNormalize {
 
         System.out.println("Last XSL processing ");
         InputStream xml3 = new ByteArrayInputStream(response2.getBytes());
-        InputStream xsl3 = this.getClass().getClassLoader().getResourceAsStream("xsl/deportes/empty.xsl");
+        InputStream xsl3 = this.getClass().getClassLoader().getResourceAsStream("xsl/deportes/normalize.xsl");
         String response3 = transformer(xml3, xsl3, true);
 
         return !response1.isEmpty() && !response2.isEmpty() && !response3.isEmpty();

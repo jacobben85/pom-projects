@@ -72,7 +72,7 @@
 	</xsl:template>
 
 	<!-- remove bbc s-c-c -->
-	<xsl:template match="sports-content-code[@code-source='bbc.co.uk']"/>
+	<!--<xsl:template match="sports-content-code[@code-source='bbc.co.uk']"/>-->
 	
 	<!-- replace tournament with schedule -->
 	<xsl:template match="tournament[//schedule]">
