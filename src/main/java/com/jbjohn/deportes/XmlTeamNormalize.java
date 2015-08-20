@@ -17,7 +17,7 @@ public class XmlTeamNormalize {
 
     public boolean process() {
 
-        InputStream xml1 = this.getClass().getClassLoader().getResourceAsStream("xml/deportes/commentary.xml");
+        InputStream xml1 = this.getClass().getClassLoader().getResourceAsStream("xml/deportes/standings.xml");
 
         InputStream xsl1 = this.getClass().getClassLoader().getResourceAsStream("xsl/deportes/bbc-to-xts.xsl");
         String response1 = transformer(xml1, xsl1, false);

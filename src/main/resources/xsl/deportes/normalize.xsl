@@ -14,7 +14,11 @@
     </xsl:variable>
     
     <xsl:variable name="fixture-key">
-        <xsl:value-of select="sportsml:sports-content/sportsml:sports-metadata/@fixture-key" />
+        <xsl:value-of select="replace(sportsml:sports-content/sportsml:sports-metadata/@fixture-key, ':', '-')" />
+    </xsl:variable>
+    
+    <xsl:variable name="event-key">
+        <xsl:value-of select="replace(substring-after(sportsml:sports-content/sportsml:sports-event/sportsml:event-metadata/@event-key, '-e.'), '[A-z]', '')"></xsl:value-of>
     </xsl:variable>
 
     <xsl:variable name="opta-id">
@@ -23,7 +27,7 @@
                 <xsl:value-of select="sportsml:sports-content/sportsml:standing/sportsml:standing-metadata/@date-coverage-type"></xsl:value-of>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="substring-after(sportsml:sports-content/sportsml:sports-event/sportsml:event-metadata/@event-key, '-e.')"></xsl:value-of>
+                <xsl:value-of select="$event-key"></xsl:value-of>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
@@ -47,5 +51,35 @@
                 </xsl:attribute>
             </xsl:element>
         </xsl:element>
+    </xsl:template>
+    <xsl:template match="sportsml:sports-content-code[@code-type='tournament'] | sportsml:sports-content-code[@code-type='team']">
+        <xsl:element name="sports-content-code" namespace="http://iptc.org/std/SportsML/2008-04-01/">
+            <xsl:attribute name="code-type">
+                <xsl:value-of select="./@code-type" />
+            </xsl:attribute>
+            <xsl:attribute name="code-key">
+                <xsl:value-of select="replace(./@code-key, '([A-Z])', '')" />
+            </xsl:attribute>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="@fixture-key">
+        <xsl:attribute name="fixture-key">
+            <xsl:value-of select="$fixture-key" />
+        </xsl:attribute>
+    </xsl:template>
+    <xsl:template match="@event-key">
+        <xsl:attribute name="event-key">
+            <xsl:value-of select="$event-key" />
+        </xsl:attribute>
+    </xsl:template>
+    <xsl:template match="@player-key">
+        <xsl:attribute name="player-key">
+            <xsl:value-of select="substring-after(., 'p.')" />
+        </xsl:attribute>
+    </xsl:template>
+    <xsl:template match="@team-key">
+        <xsl:attribute name="team-key">
+            <xsl:value-of select="substring-after(., 't.')" />
+        </xsl:attribute>
     </xsl:template>
 </xsl:stylesheet>
