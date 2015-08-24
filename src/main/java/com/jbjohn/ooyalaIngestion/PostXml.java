@@ -21,7 +21,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 public class PostXml {
 
     private static String xmlPath = System.getProperty("user.dir") + "/xml/video/3012384.xml";
-    private static String url = "http://local.cms.uvn.io/feeds/video/mcp";
+    private static String url = "http://qa.univision.psdops.com/feeds/video/mcp";
 
     public static void postToServer(String mcpId) throws IOException {
         System.out.println(mcpId);
