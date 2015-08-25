@@ -69,9 +69,13 @@ public class ElasticTest {
         elastic.addIndex(json);
     }
 
-    @Test
     public void testUpdateIndex() {
         elastic.updateIndex(jsonOBJ);
+    }
+
+    @Test
+    public void testBulkOperations() {
+        elastic.bulkOperations();
     }
 
     public void testDoDelete() {
