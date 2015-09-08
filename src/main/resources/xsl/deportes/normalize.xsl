@@ -82,4 +82,23 @@
             <xsl:value-of select="substring-after(., 't.')" />
         </xsl:attribute>
     </xsl:template>
+    <xsl:template match="sportsml:event-actions-soccer">
+        <xsl:for-each select="./*">
+            <!--<xsl:sort select="name()" />-->
+            <!--<xsl:sort select="./@sequence-number" />-->
+            <xsl:if test="position() = 1">
+                <xsl:processing-instruction name="xml-multiple">
+                    <xsl:value-of select="local-name()"></xsl:value-of>
+                </xsl:processing-instruction>
+            </xsl:if>
+            <xsl:if test="position() > 1">
+                <xsl:if test="local-name() != local-name(preceding-sibling::element()[1])">
+                    <xsl:processing-instruction name="xml-multiple">
+                        <xsl:value-of select="local-name()"></xsl:value-of>
+                    </xsl:processing-instruction>
+                </xsl:if>
+            </xsl:if>
+            <xsl:apply-templates select="." />
+        </xsl:for-each>
+    </xsl:template>
 </xsl:stylesheet>

@@ -64,13 +64,6 @@
 		</xsl:if>
 	</xsl:template>
 
-	<!-- pass all values through -->
-	<xsl:template match="text()">
-		<xsl:if test="normalize-space()">
-			<xsl:value-of select="."/>
-		</xsl:if>
-	</xsl:template>
-
 	<!-- remove bbc s-c-c -->
 	<!--<xsl:template match="sports-content-code[@code-source='bbc.co.uk']"/>-->
 	
@@ -272,17 +265,7 @@
 		<xsl:variable name="team-key-prefix" select="concat('T',$bbc-sport-code,'B')"/>
 		<xsl:variable name="vendor-id" select="substring-after(.,$team-key-prefix)"/>
 		<xsl:attribute name="team-key">
-        <xsl:choose>
-        	<xsl:when test="$bbc-pub-code='O' and document($teampath)/league/team[@optaid=$vendor-id]">
-        		<xsl:value-of select="document($teampath)/league/team[@optaid=$vendor-id]/@smlid"/>
-        	</xsl:when>
-        	<xsl:when test="$bbc-pub-code='P' and document($teampath)/league/team[@padataid=$vendor-id]">
-        		<xsl:value-of select="document($teampath)/league/team[@padataid=$vendor-id]/@smlid"/>
-        	</xsl:when>
-        	<xsl:otherwise>
-        		<xsl:value-of select="concat('t.',$vendor-id)"/>
-            </xsl:otherwise>
-        </xsl:choose>
+			<xsl:value-of select="concat('t.',$vendor-id)"/>
 		</xsl:attribute>
 	</xsl:template>
 
