@@ -25,14 +25,15 @@
         </site-metadata>
         <site-stats alignment="home" />
       </site>
+      <sports-property formal-name="television-coverage" value="Univision" />
     </event-metadata>
     <team id="EFBO793228-TFBB2061">
       <team-metadata team-key="TFBB2061" alignment="home">
         <name first="Åtvidabergs FF" full="Åtvidabergs FF" abbreviation="Åtvidabergs FF" nickname="Åtvidabergs FF" />
       </team-metadata>
       <team-stats score="0" score-opposing="0" event-outcome="tie">
-        <sub-score period-value="1" score="0" />
-        <sub-score period-value="2" score="0" />
+        <sub-score period-value="1" score="0">1</sub-score>
+        <sub-score period-value="2" score="0">2</sub-score>
       </team-stats>
       <player id="PO41224">
         <player-metadata player-key="PO41224" position-regular="goalkeeper" uniform-number="1" line-formation-position="1" status="starter">

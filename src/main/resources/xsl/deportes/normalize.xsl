@@ -83,13 +83,12 @@
         </xsl:attribute>
     </xsl:template>
     <xsl:template match="sportsml:event-actions-soccer">
-        <xsl:for-each select="./*">
-            <xsl:if test="local-name() != local-name(preceding-sibling::element()[1])">
-                <xsl:processing-instruction name="xml-multiple">
-                    <xsl:value-of select="local-name()"></xsl:value-of>
-                </xsl:processing-instruction>
-            </xsl:if>
-            <xsl:apply-templates select="." />
-        </xsl:for-each>
+        <xsl:element name="event-actions-soccer" namespace="http://iptc.org/std/SportsML/2008-04-01/">
+            <xsl:for-each select="./*">
+                <xsl:sort select="name()"></xsl:sort>
+                <xsl:sort select="./@sequence-number"></xsl:sort>
+                <xsl:apply-templates select="." />
+            </xsl:for-each>
+        </xsl:element>
     </xsl:template>
 </xsl:stylesheet>

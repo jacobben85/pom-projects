@@ -35,10 +35,14 @@ public class XmlTeamNormalize {
         System.out.println("Last XSL processing ");
         InputStream xml3 = new ByteArrayInputStream(response2.getBytes());
         InputStream xsl3 = this.getClass().getClassLoader().getResourceAsStream("xsl/deportes/normalize.xsl");
-        String response3 = transformer(xml3, xsl3, true);
+        String response3 = transformer(xml3, xsl3, false);
+
+        InputStream xml4 = new ByteArrayInputStream(response3.getBytes());
+        InputStream xsl4 = this.getClass().getClassLoader().getResourceAsStream("xsl/deportes/processingInstructions.xsl");
+        String response4 = transformer(xml4, xsl4, true);
 
         try {
-            String json = xmlToJson(response3, true);
+            String json = xmlToJson(response4, true);
             if (true) {
                 System.out.println(json);
             }
