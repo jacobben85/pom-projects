@@ -3,11 +3,12 @@ package com.jbjohn.deportes.utils;
 import java.util.HashMap;
 
 /**
+ * Generate Signature
  * Created by jbjohn on 9/15/15.
  */
 public class SignatureGenerator {
-    private static final String CLIENT_ID = "[]";
-    private static final String SECRET = "[]";
+    private static final String CLIENT_ID = "7c7d44d3f3de1fb93c2a035e916c6774010ea9fc";
+    private static final String SECRET = "bdccbf7173492babf02e570a6ba19725c8c0b90d5";
 
     public static String generateSignature(String url) {
         String signature = null;

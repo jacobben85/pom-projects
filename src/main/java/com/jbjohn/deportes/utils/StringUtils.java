@@ -10,32 +10,6 @@ import java.security.NoSuchAlgorithmException;
 public class StringUtils {
 
     private static final char[] HEX_CHARACTERS = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
-    /**
-     * Trims {@code string} to length provided by {@code charMax} inclusive of the 4 characters required for a space
-     * and ellipsis. The original {@code string} will be returned unmodified if less than {@code charMax}.
-     *
-     * @param string
-     * @param charMax
-     * @return substring of {@code string} with ellipsis added.
-     */
-    public static String getStringWithCharMax(String string, Integer charMax) {
-        String trimmedString = string;
-
-        if ((string != null) && (charMax != null)) {
-            int length = string.length();
-
-            if ((length > charMax) && ((length - 3) >= 0) && (charMax > 3)) {
-                trimmedString = string.substring(0, charMax - 3); // make room for the ellipsis;
-                trimmedString = trimmedString.trim();  // remove any trailing or leading whitespace.
-                trimmedString = trimmedString + "..."; // finally add the ellipsis
-
-            } else {
-                trimmedString = string;
-            }
-        }
-
-        return trimmedString;
-    }
 
     public static String hex(byte[] bytes) {
         if(bytes == null) {
@@ -65,7 +39,7 @@ public class StringUtils {
         try {
             digest = MessageDigest.getInstance(algorithm);
         } catch (NoSuchAlgorithmException var6) {
-            throw new IllegalArgumentException(String.format("[%s] isn\'t a valid hash algorithm!", new Object[]{algorithm}), var6);
+            throw new IllegalArgumentException(String.format("[%s] isn\'t a valid hash algorithm!", algorithm), var6);
         }
 
         byte[] bytes;

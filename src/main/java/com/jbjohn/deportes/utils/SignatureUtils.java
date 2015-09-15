@@ -35,11 +35,8 @@ public abstract class SignatureUtils {
 
         StringBuilder builder = new StringBuilder();
         builder.append(httpVerb.toUpperCase());
-
         builder.append(clientId);
-
         builder.append(path);
-
         if (queryParams != null) {
             TreeMap<String, String> sortedQueryParams = new TreeMap<>(queryParams);
 
@@ -51,13 +48,11 @@ public abstract class SignatureUtils {
                 } else {
                     builder.append("&");
                 }
-
                 builder.append(entry.getKey());
                 builder.append("=");
                 builder.append(entry.getValue());
             }
         }
-
         if (formParams != null) {
             TreeMap<String, String> sortedFormParams = new TreeMap<>(formParams);
             for (Map.Entry<String, String> entry : sortedFormParams.entrySet()) {
@@ -65,13 +60,8 @@ public abstract class SignatureUtils {
                 builder.append(entry.getValue());
             }
         }
-
         builder.append(clientSecret);
-
         String rawSignature = builder.toString();
-
-        System.out.println("Raw signature: " + rawSignature);
-
         return StringUtils.hex(StringUtils.sha1((rawSignature)));
     }
 }
