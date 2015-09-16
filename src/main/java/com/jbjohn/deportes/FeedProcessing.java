@@ -32,6 +32,9 @@ public class FeedProcessing {
             case "stats":
                 url = url + "event-stats/" + gameId;
                 break;
+            case "schedule":
+                url = url + "schedule-results/" + gameId;
+                break;
             default:
                 break;
         }

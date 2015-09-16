@@ -8,7 +8,7 @@ import java.util.HashMap;
  */
 public class SignatureGenerator {
     private static final String CLIENT_ID = "7c7d44d3f3de1fb93c2a035e916c6774010ea9fc";
-    private static final String SECRET = "bdccbf7173492babf02e570a6ba19725c8c0b90d5";
+    private static final String SECRET = "bdccbf7173492babf02e570a6ba19725c8c0b90d";
 
     public static String generateSignature(String url) {
         String signature = null;
