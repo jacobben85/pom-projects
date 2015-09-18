@@ -18,5 +18,37 @@
             </xsl:for-each>
         </xsl:element>
     </xsl:template>
+    <xsl:template match="//sportsml:official[1]">
+        <xsl:processing-instruction name="xml-multiple">
+            <xsl:value-of select="local-name()"></xsl:value-of>
+        </xsl:processing-instruction>
+        <xsl:element name="official" namespace="http://iptc.org/std/SportsML/2008-04-01/">
+            <xsl:apply-templates select="@* | node()"></xsl:apply-templates>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="//sportsml:associate[1]">
+        <xsl:processing-instruction name="xml-multiple">
+            <xsl:value-of select="local-name()"></xsl:value-of>
+        </xsl:processing-instruction>
+        <xsl:element name="associate" namespace="http://iptc.org/std/SportsML/2008-04-01/">
+            <xsl:apply-templates select="@* | node()"></xsl:apply-templates>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="//sportsml:action-soccer-play-participant[1]">
+        <xsl:processing-instruction name="xml-multiple">
+            <xsl:value-of select="local-name()"></xsl:value-of>
+        </xsl:processing-instruction>
+        <xsl:element name="action-soccer-play-participant" namespace="http://iptc.org/std/SportsML/2008-04-01/">
+            <xsl:apply-templates select="@* | node()"></xsl:apply-templates>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="//sportsml:sports-property[1]">
+        <xsl:processing-instruction name="xml-multiple">
+            <xsl:value-of select="local-name()"></xsl:value-of>
+        </xsl:processing-instruction>
+        <xsl:element name="sports-property" namespace="http://iptc.org/std/SportsML/2008-04-01/">
+            <xsl:apply-templates select="@* | node()"></xsl:apply-templates>
+        </xsl:element>
+    </xsl:template>
 
 </xsl:stylesheet>

@@ -23,7 +23,7 @@ public class XmlTeamNormalize {
 
     public boolean process() {
 
-        InputStream xml1 = this.getClass().getClassLoader().getResourceAsStream("xml/deportes/event-stats.xml");
+        InputStream xml1 = this.getClass().getClassLoader().getResourceAsStream("xml/deportes/event-stats-809979.xml");
 
         InputStream xsl1 = this.getClass().getClassLoader().getResourceAsStream("xsl/deportes/bbc-to-xts.xsl");
         String response1 = transformer(xml1, xsl1, false);
