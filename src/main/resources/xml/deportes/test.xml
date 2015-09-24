@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><sports-content xmlns="http://iptc.org/std/SportsML/2008-04-01/" xmlns:xts="http://www.xmlteam.com" xmlns:bbc="http://www.bbc.co.uk/sport/sports-data">
+    <sports-metadata date-time="2015-09-04T16:10:59+01:00" doc-id="xt.opta.20150904161059-809979-post-event" language="en-US" fixture-key="event-stats" document-class="event-summary" fixture-name="Event Score and Stats">
+        <sports-title>Doc title</sports-title>
+        <sports-content-codes>
+            <sports-content-code code-name="Opta" code-key="optasports.com" code-type="publisher"/>
+            <sports-content-code code-name="XML Team Solutions, Inc." code-key="xmlteam.com" code-type="distributor"/>
+            <sports-content-code code-type="sport" code-key="15054000" code-name="Soccer"/>
+            <sports-content-code code-type="tournament" code-key="129"/>
+            <sports-content-code code-type="league" code-key="l.rfpl.org" code-name="Russian Premier League" code-source="xmlteam.com"/>
+            <sports-content-code code-type="season" code-key="2015"/>
+            <sports-content-code code-type="team" code-key="4169"/>
+            <sports-content-code code-type="team" code-key="271"/>
+        </sports-content-codes>
+        <?xml-multiple sports-property?><sports-property formal-name="compound-key" value="soccer:2015:129:event-stats:809979"/></sports-metadata>
+</sports-content>

@@ -21,6 +21,6 @@ public class UpdaterTest {
 
     @Test
     public void updateJsonValue() {
-        Updater.updateJsonValue();
+        Updater.updateJsonValue("");
     }
 }

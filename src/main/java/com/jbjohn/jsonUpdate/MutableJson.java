@@ -129,10 +129,16 @@ public class MutableJson {
 
         @Override
         public void parse(Map.Entry<String, Object> entry, Class<?> parseToType) {
-            try {
-                entry.setValue(new ObjectMapper().readValue(entry.getValue().toString(), parseToType));
-            } catch (IOException e) {
-                e.printStackTrace();
+
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+            if (entry.getValue() != null) {
+                System.out.println(entry.getValue());
+                try {
+                    entry.setValue(new ObjectMapper().readValue(entry.getValue().toString(), parseToType));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

@@ -13,20 +13,18 @@ import com.google.gson.JsonParser;
  */
 public class Updater {
 
-    public static void updateJsonValue() {
+    public static void updateJsonValue(String jsonString) {
 
         JsonParser parser = new JsonParser();
         JsonObject jsonObject = new JsonObject();
 
-        String reader = "{'glossary':{'title':'10','GlossDiv':{'title':'S','GlossList':{'GlossEntry':{'ID':'SGML','SortAs':'SGML','GlossTerm':'Standard Generalized Markup Language','Acronym':'SGML','Abbrev':'ISO 8879:1986','GlossDef':{'para':'A meta-markup language, used to create markup languages such as DocBook.','GlossSeeAlso':['GML','XML']},'GlossSee':'markup'}}}}}";
+        String reader = jsonString;
         try {
             jsonObject = (JsonObject) parser.parse(reader);
 
         } catch (Exception ex) {
             System.out.println(ex.getLocalizedMessage());
         }
-
-        System.out.println(jsonObject.toString());
 
         Map<String, Object> userData = null;
         try {
@@ -37,7 +35,7 @@ public class Updater {
         }
 
         MutableJson json = new MutableJson(userData);
-        json.parse("$.glossary.title", int.class);
+        json.parse("$.sports-content.sports-metadata.sports-title", Integer.class);
         JSONObject jsonFinal = new JSONObject(json.map());
         System.out.println(jsonFinal.toString());
     }

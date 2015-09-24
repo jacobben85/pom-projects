@@ -1,5 +1,6 @@
 package com.jbjohn.deportes;
 
+import com.jayway.jsonpath.JsonPath;
 import de.odysseus.staxon.json.JsonXMLConfig;
 import de.odysseus.staxon.json.JsonXMLConfigBuilder;
 import de.odysseus.staxon.json.JsonXMLOutputFactory;
@@ -41,14 +42,18 @@ public class XmlTeamNormalize {
         InputStream xsl4 = this.getClass().getClassLoader().getResourceAsStream("xsl/deportes/processingInstructions.xsl");
         String response4 = transformer(xml4, xsl4, true);
 
+        String json = "";
         try {
-            String json = xmlToJson(response4, true);
-            if (true) {
+            json = xmlToJson(response4, true);
+            if (false) {
                 System.out.println(json);
             }
         } catch (XMLStreamException e) {
             e.printStackTrace();
         }
+
+        Object teamKey = JsonPath.parse(json).read("$.sports-content.sports-event.team.[*].team-metadata.@team-key");
+        System.out.println(teamKey.toString());
 
         return !response1.isEmpty() && !response2.isEmpty() && !response3.isEmpty();
     }
