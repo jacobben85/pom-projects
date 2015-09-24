@@ -82,6 +82,13 @@ public class GenericUtil {
         return path;
     }
 
+    public static String trimKey(String key) {
+        if (key.startsWith("[") && key.endsWith("]")) {
+            key = key.replace("[","").replace("]", "");
+        }
+        return key;
+    }
+
     public static String newKey(List<String> stringList) {
         String newKey = "";
         int counter = 0;

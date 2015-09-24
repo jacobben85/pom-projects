@@ -10,33 +10,40 @@ import java.util.List;
  */
 public class Setter {
 
+    private static Object value;
+
     public static Object setByPath(Object map, String key, Object value) {
 
         key = GenericUtil.trimPath(key);
+        Setter.value = value;
 
         if (map instanceof HashMap) {
-            return Setter.setByPath((HashMap<String, Object>) map, key, value);
+            return Setter.setByPath((HashMap<String, Object>) map, key);
         } else {
-            return Setter.setByPath((ArrayList) map, key, value);
+            return Setter.setByPath((ArrayList) map, key);
         }
     }
 
-    public static Object setByPath(HashMap<String, Object> map, String path, Object value) {
+    public static Object setByPath(Object map, String key) {
+
+        if (map instanceof HashMap) {
+            return Setter.setByPath((HashMap<String, Object>) map, key);
+        } else {
+            return Setter.setByPath((ArrayList) map, key);
+        }
+    }
+
+    public static Object setByPath(HashMap<String, Object> map, String path) {
 
         List<String> stringList = Arrays.asList(path.split("\\."));
         if (stringList.size() > 1) {
-            String key = stringList.get(0);
-            if (key.startsWith("[") && key.endsWith("]")) {
-                key = key.replace("[","").replace("]","");
-            }
-
+            String key = GenericUtil.trimKey(stringList.get(0));
             String newKey = GenericUtil.newKey(stringList);
-
             if (map.get(key) instanceof HashMap) {
-                map.put(key, setByPath((HashMap<String, Object>) map.get(key), newKey, value));
+                map.put(key, setByPath(map.get(key), newKey));
             }
             if (map.get(key) instanceof ArrayList) {
-                map.put(key, setByPath((ArrayList) map.get(key), newKey, value));
+                map.put(key, setByPath(map.get(key), newKey));
             }
         } else {
             if (path.startsWith("[") && path.endsWith("]")) {
@@ -47,24 +54,21 @@ public class Setter {
         return map;
     }
 
-    public static Object setByPath(ArrayList map, String path, Object value) {
+    public static Object setByPath(ArrayList map, String path) {
 
         int index = 0;
         List<String> stringList = Arrays.asList(path.split("\\."));
         if (stringList.size() > 1) {
-            String key = stringList.get(0);
-            if (key.startsWith("[") && key.endsWith("]")) {
-                key = key.replace("[","").replace("]","");
+            String key = GenericUtil.trimKey(stringList.get(0));
+            if (key.matches("^-?\\d+$")) {
                 index = Integer.parseInt(key);
             }
-
             String newKey = GenericUtil.newKey(stringList);
-
             if (map.get(index) instanceof HashMap) {
-                map.set(index, setByPath((HashMap<String, Object>) map.get(index), newKey, value));
+                map.set(index, setByPath(map.get(index), newKey));
             }
             if (map.get(index) instanceof ArrayList) {
-                map.set(index, setByPath((ArrayList) map.get(index), newKey, value));
+                map.set(index, setByPath(map.get(index), newKey));
             }
         } else {
             if (path.startsWith("[") && path.endsWith("]")) {

@@ -9,10 +9,22 @@ import com.jbjohn.utils.mapUtilsLibraries.Setter;
 public class MapUtils {
 
     public static Object get(Object map, String key) {
-        return Getter.searchByPath(map, key);
+        Object response = null;
+        try {
+            response = Getter.searchByPath(map, key);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return response;
     }
 
     public static Object set(Object map, String key, Object value) {
-        return Setter.setByPath(map, key, value);
+        Object response = null;
+        try {
+            response = Setter.setByPath(map, key, value);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return response;
     }
 }
