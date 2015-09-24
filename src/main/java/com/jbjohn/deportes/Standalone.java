@@ -50,7 +50,7 @@ public class Standalone {
 //        System.out.println(searchByPath(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
 //        System.out.println(setByPath(result, "sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name", "Opta 2"));
 //        System.out.println(searchByPath(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
-        System.out.println(searchByPath(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[?@code-type==team].@code-key"));
+        System.out.println(searchByPath(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[?@code-key<272].@code-type"));
 //        System.out.println(JsonPath.parse(json).read("$.sports-content.sports-metadata.sports-content-codes.[*].[*]").toString());
     }
 
@@ -118,6 +118,14 @@ public class Standalone {
             for (Object item : request) {
                 Map<String, Object> itemMap = (Map<String, Object>) item;
                 if (itemMap.containsKey(predicateKey)) {
+
+                    int valueInt = 0;
+                    int predicateInt = 0;
+                    if (((String) itemMap.get(predicateKey)).matches("^-?\\d+$") && predicateValue.matches("^-?\\d+$")) {
+                        valueInt = Integer.parseInt((String) itemMap.get(predicateKey));
+                        predicateInt = Integer.parseInt(predicateValue);
+                    }
+
                     switch (operation) {
                         case 1:
                             if (itemMap.get(predicateKey).equals(predicateValue)) {
@@ -125,8 +133,14 @@ public class Standalone {
                             }
                             break;
                         case 2:
+                            if (valueInt > predicateInt) {
+                                response.add(itemMap);
+                            }
                             break;
                         case 3:
+                            if (valueInt < predicateInt) {
+                                response.add(itemMap);
+                            }
                             break;
                         default:
                             break;
