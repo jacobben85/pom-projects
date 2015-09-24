@@ -70,6 +70,7 @@ public class Setter {
                 int counter = 0;
                 for (Object values : map) {
                     map.set(counter, setByPath(map.get(counter), newKey));
+                    counter++;
                 }
             } else {
                 if (key.matches("^-?\\d+$")) {
@@ -87,6 +88,7 @@ public class Setter {
             index = Integer.parseInt(path);
             map.set(index, value);
         }
+
         return map;
     }
 }
