@@ -35,7 +35,7 @@ public class Setter {
 
     public static Object setByPath(HashMap<String, Object> map, String path) {
 
-        List<String> stringList = Arrays.asList(path.split("\\."));
+        List<String> stringList = GenericUtil.getKeyList(path);
         if (stringList.size() > 1) {
             String key = GenericUtil.trimKey(stringList.get(0));
             String newKey = GenericUtil.newKey(stringList);
@@ -57,7 +57,7 @@ public class Setter {
     public static Object setByPath(ArrayList map, String path) {
 
         int index = 0;
-        List<String> stringList = Arrays.asList(path.split("\\."));
+        List<String> stringList = GenericUtil.getKeyList(path);
         if (stringList.size() > 1) {
             String key = GenericUtil.trimKey(stringList.get(0));
             if (key.matches("^-?\\d+$")) {

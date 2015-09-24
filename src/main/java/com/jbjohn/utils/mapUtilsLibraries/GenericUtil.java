@@ -30,6 +30,11 @@ public class GenericUtil {
             List<String> predicateList = Arrays.asList(predicate.split("<"));
             predicateKey = predicateList.get(0);
             predicateValue = predicateList.get(1);
+        } else if (predicate.contains("=")) {
+            operation = 1;
+            List<String> predicateList = Arrays.asList(predicate.split("="));
+            predicateKey = predicateList.get(0);
+            predicateValue = predicateList.get(1);
         }
 
         if (map instanceof ArrayList) {
@@ -103,5 +108,9 @@ public class GenericUtil {
             newKey += string;
         }
         return newKey;
+    }
+
+    public static List<String> getKeyList(String path) {
+        return Arrays.asList(path.split("\\."));
     }
 }

@@ -57,7 +57,7 @@ public class Getter {
 
         path = GenericUtil.trimPath(path);
 
-        List<String> stringList = Arrays.asList(path.split("\\."));
+        List<String> stringList = GenericUtil.getKeyList(path);
         if (stringList.size() > 1) {
             String key = stringList.get(0);
             if (key.startsWith("[") && key.endsWith("]")) {

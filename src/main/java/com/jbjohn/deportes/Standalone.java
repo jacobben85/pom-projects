@@ -1,7 +1,6 @@
 package com.jbjohn.deportes;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jayway.jsonpath.JsonPath;
 import com.jbjohn.utils.MapUtils;
 import org.apache.commons.io.IOUtils;
 
@@ -13,6 +12,7 @@ import java.nio.charset.Charset;
 import java.util.*;
 
 /**
+ * Standalone sandbox for validation
  */
 public class Standalone {
 
@@ -33,8 +33,9 @@ public class Standalone {
         }
 
         HashMap<String,Object> result = new ObjectMapper().readValue(json, HashMap.class);
-        System.out.println(MapUtils.get(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[?@code-type==team].@code-key"));
-        System.out.println(MapUtils.set(result, "$.sports-content.sports-metadata.sports-title", "new title"));
-        System.out.println(MapUtils.get(result, "$.sports-content.sports-metadata.sports-title"));
+        ArrayList titles = new ArrayList();
+        titles.add("title 1");
+        titles.add("title 2");
+        System.out.println(MapUtils.get(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[?@code-type=team].@code-key"));
     }
 }
