@@ -47,12 +47,16 @@ public class Standalone {
 
         HashMap<String,Object> result = new ObjectMapper().readValue(json, HashMap.class);
 //        System.out.println(searchByPath(result, "sports-content.sports-metadata.sports-title"));
-        System.out.println(setByPath(result, "sports-content.sports-metadata.sports-title", "New Title"));
-        System.out.println(searchByPath(result, "sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
-        System.out.println(searchByPath(result, "sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
+//        System.out.println(setByPath(result, "sports-content.sports-metadata.sports-title", "New Title"));
+//        System.out.println(searchByPath(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
+        System.out.println(setByPath(result, "sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name", "Opta 2"));
+        System.out.println(searchByPath(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
     }
 
     private Object searchByPath(Object map, String path) {
+        if (path.startsWith("$.")) {
+            path = path.substring(2);
+        }
         List<String> stringList = Arrays.asList(path.split("\\."));
         if (stringList.size() > 1) {
             String key = stringList.get(0);
@@ -96,8 +100,15 @@ public class Standalone {
     }
 
     private Object setByPath(HashMap<String, Object> map, String path, Object value) {
+        if (path.startsWith("$.")) {
+            path = path.substring(2);
+        }
         List<String> stringList = Arrays.asList(path.split("\\."));
         if (stringList.size() > 1) {
+            String key = stringList.get(0);
+            if (key.startsWith("[") && key.endsWith("]")) {
+                key = key.replace("[","").replace("]","");
+            }
             String newKey = "";
             int counter = 0;
             for (String string : stringList) {
@@ -110,9 +121,56 @@ public class Standalone {
                 }
                 newKey += string;
             }
-            map.put(stringList.get(0), setByPath((HashMap<String, Object>) map.get(stringList.get(0)), newKey, value));
+            if (map.get(key) instanceof HashMap) {
+                map.put(key, setByPath((HashMap<String, Object>) map.get(key), newKey, value));
+            }
+            if (map.get(key) instanceof ArrayList) {
+                map.put(key, setByPath((ArrayList) map.get(key), newKey, value));
+            }
         } else {
+            if (path.startsWith("[") && path.endsWith("]")) {
+                path = path.replace("[","").replace("]","");
+            }
             map.put(path, value);
+        }
+        return map;
+    }
+    private Object setByPath(ArrayList map, String path, Object value) {
+        if (path.startsWith("$.")) {
+            path = path.substring(2);
+        }
+        int index = 0;
+        List<String> stringList = Arrays.asList(path.split("\\."));
+        if (stringList.size() > 1) {
+            String key = stringList.get(0);
+            if (key.startsWith("[") && key.endsWith("]")) {
+                key = key.replace("[","").replace("]","");
+                index = Integer.parseInt(key);
+            }
+            String newKey = "";
+            int counter = 0;
+            for (String string : stringList) {
+                counter++;
+                if (counter < 2) {
+                    continue;
+                }
+                if (newKey.length() > 1) {
+                    newKey += ".";
+                }
+                newKey += string;
+            }
+            if (map.get(index) instanceof HashMap) {
+                map.set(index, setByPath((HashMap<String, Object>) map.get(index), newKey, value));
+            }
+            if (map.get(index) instanceof ArrayList) {
+                map.set(index, setByPath((ArrayList) map.get(index), newKey, value));
+            }
+        } else {
+            if (path.startsWith("[") && path.endsWith("]")) {
+                path = path.replace("[","").replace("]","");
+                index = Integer.parseInt(path);
+            }
+            map.set(index, value);
         }
         return map;
     }
