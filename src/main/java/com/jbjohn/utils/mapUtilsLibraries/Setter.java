@@ -6,31 +6,32 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
+ * Hash Map setter
  */
 public class Setter {
 
-    public static Object setByPath(HashMap<String, Object> map, String path, Object value) {
-        if (path.startsWith("$.")) {
-            path = path.substring(2);
+    public static Object setByPath(Object map, String key, Object value) {
+
+        key = GenericUtil.trimPath(key);
+
+        if (map instanceof HashMap) {
+            return Setter.setByPath((HashMap<String, Object>) map, key, value);
+        } else {
+            return Setter.setByPath((ArrayList) map, key, value);
         }
+    }
+
+    public static Object setByPath(HashMap<String, Object> map, String path, Object value) {
+
         List<String> stringList = Arrays.asList(path.split("\\."));
         if (stringList.size() > 1) {
             String key = stringList.get(0);
             if (key.startsWith("[") && key.endsWith("]")) {
                 key = key.replace("[","").replace("]","");
             }
-            String newKey = "";
-            int counter = 0;
-            for (String string : stringList) {
-                counter++;
-                if (counter < 2) {
-                    continue;
-                }
-                if (newKey.length() > 1) {
-                    newKey += ".";
-                }
-                newKey += string;
-            }
+
+            String newKey = GenericUtil.newKey(stringList);
+
             if (map.get(key) instanceof HashMap) {
                 map.put(key, setByPath((HashMap<String, Object>) map.get(key), newKey, value));
             }
@@ -47,9 +48,7 @@ public class Setter {
     }
 
     public static Object setByPath(ArrayList map, String path, Object value) {
-        if (path.startsWith("$.")) {
-            path = path.substring(2);
-        }
+
         int index = 0;
         List<String> stringList = Arrays.asList(path.split("\\."));
         if (stringList.size() > 1) {
@@ -58,18 +57,9 @@ public class Setter {
                 key = key.replace("[","").replace("]","");
                 index = Integer.parseInt(key);
             }
-            String newKey = "";
-            int counter = 0;
-            for (String string : stringList) {
-                counter++;
-                if (counter < 2) {
-                    continue;
-                }
-                if (newKey.length() > 1) {
-                    newKey += ".";
-                }
-                newKey += string;
-            }
+
+            String newKey = GenericUtil.newKey(stringList);
+
             if (map.get(index) instanceof HashMap) {
                 map.set(index, setByPath((HashMap<String, Object>) map.get(index), newKey, value));
             }

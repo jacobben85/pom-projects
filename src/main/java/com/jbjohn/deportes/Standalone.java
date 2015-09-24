@@ -32,20 +32,9 @@ public class Standalone {
             e.printStackTrace();
         }
 
-        Object teamKey = JsonPath.parse(json).read("$.sports-content.sports-metadata.sports-content-codes.sports-content-code[?(@.['@code-type'] == 'team')].@code-key");
-        if (teamKey instanceof ArrayList) {
-            int size = ((ArrayList) teamKey).size();
-            int counter = 0;
-            ArrayList arrayList = new ArrayList();
-            while (size - counter > 0) {
-                arrayList.add(((ArrayList) teamKey).get(counter));
-                counter++;
-            }
-        }
-
         HashMap<String,Object> result = new ObjectMapper().readValue(json, HashMap.class);
-        System.out.println(MapUtils.search(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[?@code-key<272].@code-type"));
-        System.out.println(MapUtils.set(result, "$.sports-content.sports-metadata.sports-title", "new value"));
-        System.out.println(MapUtils.search(result, "$.sports-content.sports-metadata.sports-title"));
+        System.out.println(MapUtils.get(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[?@code-type==team].@code-key"));
+        System.out.println(MapUtils.set(result, "$.sports-content.sports-metadata.sports-title", "new title"));
+        System.out.println(MapUtils.get(result, "$.sports-content.sports-metadata.sports-title"));
     }
 }

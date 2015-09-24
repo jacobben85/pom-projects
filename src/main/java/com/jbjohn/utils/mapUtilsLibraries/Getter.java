@@ -3,74 +3,9 @@ package com.jbjohn.utils.mapUtilsLibraries;
 import java.util.*;
 
 /**
+ * Getter from HashMap
  */
 public class Getter {
-
-    private static Object processPredicate(Object map, String predicate) {
-
-        int operation = 0;
-        String predicateKey = "";
-        String predicateValue = "";
-
-        if (predicate.contains("==")) {
-            operation = 1;
-            List<String> predicateList = Arrays.asList(predicate.split("=="));
-            predicateKey = predicateList.get(0);
-            predicateValue = predicateList.get(1);
-        } else if (predicate.contains(">")) {
-            operation = 2;
-            List<String> predicateList = Arrays.asList(predicate.split(">"));
-            predicateKey = predicateList.get(0);
-            predicateValue = predicateList.get(1);
-        } else if (predicate.contains("<")) {
-            operation = 3;
-            List<String> predicateList = Arrays.asList(predicate.split("<"));
-            predicateKey = predicateList.get(0);
-            predicateValue = predicateList.get(1);
-        }
-
-        if (map instanceof ArrayList) {
-            ArrayList request = (ArrayList) map;
-            ArrayList response = new ArrayList();
-
-            for (Object item : request) {
-                Map<String, Object> itemMap = (Map<String, Object>) item;
-                if (itemMap.containsKey(predicateKey)) {
-
-                    int valueInt = 0;
-                    int predicateInt = 0;
-                    if (((String) itemMap.get(predicateKey)).matches("^-?\\d+$") && predicateValue.matches("^-?\\d+$")) {
-                        valueInt = Integer.parseInt((String) itemMap.get(predicateKey));
-                        predicateInt = Integer.parseInt(predicateValue);
-                    }
-
-                    switch (operation) {
-                        case 1:
-                            if (itemMap.get(predicateKey).equals(predicateValue)) {
-                                response.add(itemMap);
-                            }
-                            break;
-                        case 2:
-                            if (valueInt > predicateInt) {
-                                response.add(itemMap);
-                            }
-                            break;
-                        case 3:
-                            if (valueInt < predicateInt) {
-                                response.add(itemMap);
-                            }
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            }
-
-            return response;
-        }
-
-        return map;
-    }
 
     private static Object search(Object map, String key) {
         String predicate = "";
@@ -92,7 +27,7 @@ public class Getter {
                 return request;
             }
             if (!predicate.equals("")) {
-                return processPredicate(request, predicate);
+                return GenericUtil.processPredicate(request, predicate);
             }
             if (key.matches("^-?\\d+$")) {
                 int index = Integer.parseInt(key);
@@ -119,9 +54,9 @@ public class Getter {
     }
 
     public static Object searchByPath(Object map, String path) {
-        if (path.startsWith("$.")) {
-            path = path.substring(2);
-        }
+
+        path = GenericUtil.trimPath(path);
+
         List<String> stringList = Arrays.asList(path.split("\\."));
         if (stringList.size() > 1) {
             String key = stringList.get(0);
@@ -129,18 +64,7 @@ public class Getter {
                 key = key.replace("[","").replace("]","");
             }
             map = search(map, key);
-            String newKey = "";
-            int counter = 0;
-            for (String string : stringList) {
-                counter++;
-                if (counter < 2) {
-                    continue;
-                }
-                if (newKey.length() > 1) {
-                    newKey += ".";
-                }
-                newKey += string;
-            }
+            String newKey = GenericUtil.newKey(stringList);
             path = newKey;
         } else {
             if (path.startsWith("[") && path.endsWith("]")) {
