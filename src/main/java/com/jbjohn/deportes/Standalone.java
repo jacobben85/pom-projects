@@ -36,6 +36,7 @@ public class Standalone {
         ArrayList titles = new ArrayList();
         titles.add("title 1");
         titles.add("title 2");
-        System.out.println(MapUtils.get(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[?@code-type=team].@code-key"));
+        System.out.println(MapUtils.get(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[*].@code-key"));
+        System.out.println(MapUtils.set(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[*].@code-key", "test"));
     }
 }
