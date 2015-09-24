@@ -1,5 +1,6 @@
 package com.jbjohn.deportes;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
 import org.apache.commons.io.IOUtils;
 
@@ -9,6 +10,9 @@ import java.io.InputStream;
 import java.io.StringWriter;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  */
@@ -31,7 +35,6 @@ public class Standalone {
         }
 
         Object teamKey = JsonPath.parse(json).read("$.sports-content.sports-metadata.sports-content-codes.sports-content-code[?(@.['@code-type'] == 'team')].@code-key");
-        System.out.println(teamKey.toString());
         if (teamKey instanceof ArrayList) {
             int size = ((ArrayList) teamKey).size();
             int counter = 0;
@@ -40,9 +43,77 @@ public class Standalone {
                 arrayList.add(((ArrayList) teamKey).get(counter));
                 counter++;
             }
-            System.out.println(arrayList.toString());
         }
-//        json = JsonPath.parse(json).set("$.sports-content.sports-metadata.sports-content-codes.sports-content-code[?(@['@code-type'] == 'team')].@code-key", 10).jsonString();
-//        System.out.println(json);
+
+        HashMap<String,Object> result = new ObjectMapper().readValue(json, HashMap.class);
+//        System.out.println(searchByPath(result, "sports-content.sports-metadata.sports-title"));
+        System.out.println(setByPath(result, "sports-content.sports-metadata.sports-title", "New Title"));
+        System.out.println(searchByPath(result, "sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
+        System.out.println(searchByPath(result, "sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
+    }
+
+    private Object searchByPath(Object map, String path) {
+        List<String> stringList = Arrays.asList(path.split("\\."));
+        if (stringList.size() > 1) {
+            String key = stringList.get(0);
+            if (key.startsWith("[") && key.endsWith("]")) {
+                key = key.replace("[","").replace("]","");
+            }
+            map = search(map, key);
+            String newKey = "";
+            int counter = 0;
+            for (String string : stringList) {
+                counter++;
+                if (counter < 2) {
+                    continue;
+                }
+                if (newKey.length() > 1) {
+                    newKey += ".";
+                }
+                newKey += string;
+            }
+            path = newKey;
+        } else {
+            if (path.startsWith("[") && path.endsWith("]")) {
+                path = path.replace("[","").replace("]","");
+            }
+            return search(map, path);
+        }
+        return searchByPath(map, path);
+    }
+
+    private Object search(Object map, String key) {
+        if (map instanceof HashMap) {
+            HashMap<String,Object> request = (HashMap<String, Object>) map;
+            return request.get(key);
+        }
+        if (map instanceof ArrayList) {
+            ArrayList request = (ArrayList) map;
+            int index = Integer.parseInt(key);
+            return request.get(index);
+        }
+        return null;
+    }
+
+    private Object setByPath(HashMap<String, Object> map, String path, Object value) {
+        List<String> stringList = Arrays.asList(path.split("\\."));
+        if (stringList.size() > 1) {
+            String newKey = "";
+            int counter = 0;
+            for (String string : stringList) {
+                counter++;
+                if (counter < 2) {
+                    continue;
+                }
+                if (newKey.length() > 1) {
+                    newKey += ".";
+                }
+                newKey += string;
+            }
+            map.put(stringList.get(0), setByPath((HashMap<String, Object>) map.get(stringList.get(0)), newKey, value));
+        } else {
+            map.put(path, value);
+        }
+        return map;
     }
 }
