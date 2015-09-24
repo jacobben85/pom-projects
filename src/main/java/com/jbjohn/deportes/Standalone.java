@@ -3,16 +3,15 @@ package com.jbjohn.deportes;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
 import org.apache.commons.io.IOUtils;
+import org.elasticsearch.index.mapper.SourceToParse;
 
+import javax.jws.Oneway;
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  */
@@ -49,9 +48,12 @@ public class Standalone {
 //        System.out.println(searchByPath(result, "sports-content.sports-metadata.sports-title"));
 //        System.out.println(setByPath(result, "sports-content.sports-metadata.sports-title", "New Title"));
 //        System.out.println(searchByPath(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
-        System.out.println(setByPath(result, "sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name", "Opta 2"));
-        System.out.println(searchByPath(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
+//        System.out.println(setByPath(result, "sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name", "Opta 2"));
+//        System.out.println(searchByPath(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[0].@code-name"));
+        System.out.println(searchByPath(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[?@code-type==team].@code-key"));
+//        System.out.println(JsonPath.parse(json).read("$.sports-content.sports-metadata.sports-content-codes.[*].[*]").toString());
     }
+
 
     private Object searchByPath(Object map, String path) {
         if (path.startsWith("$.")) {
@@ -86,17 +88,102 @@ public class Standalone {
         return searchByPath(map, path);
     }
 
+    private Object processPredicate(Object map, String predicate) {
+
+        int operation = 0;
+        String predicateKey = "";
+        String predicateValue = "";
+
+        if (predicate.contains("==")) {
+            operation = 1;
+            List<String> predicateList = Arrays.asList(predicate.split("=="));
+            predicateKey = predicateList.get(0);
+            predicateValue = predicateList.get(1);
+        } else if (predicate.contains(">")) {
+            operation = 2;
+            List<String> predicateList = Arrays.asList(predicate.split(">"));
+            predicateKey = predicateList.get(0);
+            predicateValue = predicateList.get(1);
+        } else if (predicate.contains("<")) {
+            operation = 3;
+            List<String> predicateList = Arrays.asList(predicate.split("<"));
+            predicateKey = predicateList.get(0);
+            predicateValue = predicateList.get(1);
+        }
+
+        if (map instanceof ArrayList) {
+            ArrayList request = (ArrayList) map;
+            ArrayList response = new ArrayList();
+
+            for (Object item : request) {
+                Map<String, Object> itemMap = (Map<String, Object>) item;
+                if (itemMap.containsKey(predicateKey)) {
+                    switch (operation) {
+                        case 1:
+                            if (itemMap.get(predicateKey).equals(predicateValue)) {
+                                response.add(itemMap);
+                            }
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            return response;
+        }
+
+        return map;
+    }
+
     private Object search(Object map, String key) {
+        String predicate = "";
+
+        if (key.startsWith("?")) {
+            predicate = key.substring(1);
+        }
+
         if (map instanceof HashMap) {
             HashMap<String,Object> request = (HashMap<String, Object>) map;
+            if (key.equals("*")) {
+                return request.values();
+            }
             return request.get(key);
         }
         if (map instanceof ArrayList) {
             ArrayList request = (ArrayList) map;
-            int index = Integer.parseInt(key);
-            return request.get(index);
+            if (key.equals("*")) {
+                return request;
+            }
+            if (!predicate.equals("")) {
+                return processPredicate(request, predicate);
+            }
+            if (key.matches("^-?\\d+$")) {
+                int index = Integer.parseInt(key);
+                return request.get(index);
+            }
+            ArrayList response = new ArrayList();
+            for (Object item : request) {
+                Map<String, Object> itemMap = (Map<String, Object>) item;
+                if (itemMap.containsKey(key)) {
+                    response.add(itemMap.get(key));
+                }
+            }
+            return response;
         }
-        return null;
+        if (map instanceof Collection) {
+            Collection<Object> request = (Collection<Object>) map;
+            ArrayList<Object> response = new ArrayList<>();
+            for (Object item : request) {
+                response.add(item);
+            }
+            return response.get(0);
+        }
+        return map;
     }
 
     private Object setByPath(HashMap<String, Object> map, String path, Object value) {
