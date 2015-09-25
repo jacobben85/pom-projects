@@ -1,7 +1,9 @@
 package com.jbjohn.deportes;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import com.jbjohn.utils.MapUtils;
+import com.jbjohn.utils.mapUtilsLibraries.TypeParser;
 import org.apache.commons.io.IOUtils;
 
 import javax.xml.stream.XMLStreamException;
@@ -32,11 +34,9 @@ public class Standalone {
             e.printStackTrace();
         }
 
+        Gson gson = new Gson();
         HashMap<String,Object> result = new ObjectMapper().readValue(json, HashMap.class);
-        ArrayList titles = new ArrayList();
-        titles.add("title 1");
-        titles.add("title 2");
-        System.out.println(MapUtils.get(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[*].@code-key"));
-        System.out.println(MapUtils.set(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[*].@code-key", "test"));
+        HashMap<String,Object> result2 = (HashMap<String,Object>) MapUtils.parse(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[*].@code-key", TypeParser.Type.INTEGER);
+        System.out.println(gson.toJson(result2));
     }
 }

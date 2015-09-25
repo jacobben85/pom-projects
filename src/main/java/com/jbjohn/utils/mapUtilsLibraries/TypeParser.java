@@ -3,16 +3,25 @@ package com.jbjohn.utils.mapUtilsLibraries;
 import java.util.*;
 
 /**
- * Hash Map setter
  */
-public class Setter {
+public class TypeParser {
 
-    private static Object value;
+    public enum Type {
+        STRING("String"),
+        INTEGER("Integer"),
+        BOOLEAN("Boolean");
 
-    public static Object setByPath(Object map, String key, Object value) {
+        private String type;
 
+        Type(String type) {
+            this.type = type;
+        }
+    }
+    private static Type type = Type.STRING;
+
+    public static Object setByPath(Object map, String key, Type type) {
+        TypeParser.type = type;
         key = GenericUtil.trimPath(key);
-        Setter.value = value;
 
         if (map instanceof HashMap) {
             return setByPath((HashMap<String, Object>) map, key);
@@ -21,7 +30,7 @@ public class Setter {
         }
     }
 
-    public static Object setByPath(Object map, String key) {
+    private static Object setByPath(Object map, String key) {
 
         if (map instanceof HashMap) {
             return setByPath((HashMap<String, Object>) map, key);
@@ -30,7 +39,7 @@ public class Setter {
         }
     }
 
-    public static Object setByPath(HashMap<String, Object> map, String path) {
+    private static Object setByPath(HashMap<String, Object> map, String path) {
 
         List<String> stringList = GenericUtil.getKeyList(path);
         if (stringList.size() > 1) {
@@ -54,7 +63,7 @@ public class Setter {
             }
         } else {
             path = GenericUtil.trimKey(path);
-            map.put(path, value);
+            map.put(path, getValue(map.get(path)));
         }
         return map;
     }
@@ -86,9 +95,34 @@ public class Setter {
         } else {
             path = GenericUtil.trimKey(path);
             index = Integer.parseInt(path);
-            map.set(index, value);
+            map.set(index, getValue(map.get(index)));
         }
 
         return map;
+    }
+
+    private static Object getValue(Object value) {
+        Object response = value;
+        switch (type) {
+            case STRING:
+                if (!(value instanceof String)) {
+                    response = String.valueOf(value);
+                }
+                break;
+            case INTEGER:
+                if (!(value instanceof Integer) && value.toString().matches("^-?\\d+$")) {
+                    response = Integer.parseInt(value.toString());
+                }
+                break;
+            case BOOLEAN:
+                if (!(value instanceof Boolean) && (value.toString().equalsIgnoreCase("true") || value.toString().equalsIgnoreCase("false"))) {
+                    response = Boolean.parseBoolean(value.toString());
+                }
+                break;
+            default:
+                response = value;
+                break;
+        }
+        return response;
     }
 }
