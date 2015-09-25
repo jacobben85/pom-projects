@@ -9,7 +9,8 @@ public class TypeParser {
     public enum Type {
         STRING("String"),
         INTEGER("Integer"),
-        BOOLEAN("Boolean");
+        BOOLEAN("Boolean"),
+        FLOAT("Float");
 
         private String type;
 
@@ -63,7 +64,18 @@ public class TypeParser {
             }
         } else {
             path = GenericUtil.trimKey(path);
-            map.put(path, getValue(map.get(path)));
+            if (path.equals("*")) {
+                HashMap<String, Object> tempMap = (HashMap<String, Object>) map.clone();
+                Iterator it = tempMap.entrySet().iterator();
+                while (it.hasNext()) {
+                    Map.Entry pair = (Map.Entry) it.next();
+                    map.put((String) pair.getKey(), getValue(map.get(pair.getKey())));
+                    it.remove();
+                }
+            } else {
+                path = GenericUtil.trimKey(path);
+                map.put(path, getValue(map.get(path)));
+            }
         }
         return map;
     }
@@ -94,8 +106,16 @@ public class TypeParser {
             }
         } else {
             path = GenericUtil.trimKey(path);
-            index = Integer.parseInt(path);
-            map.set(index, getValue(map.get(index)));
+            if (path.equals("*")) {
+                int counter = 0;
+                for (Object values : map) {
+                    map.set(counter, getValue(map.get(counter)));
+                    counter++;
+                }
+            } else {
+                index = Integer.parseInt(path);
+                map.set(index, getValue(map.get(index)));
+            }
         }
 
         return map;
@@ -117,6 +137,11 @@ public class TypeParser {
             case BOOLEAN:
                 if (!(value instanceof Boolean) && (value.toString().equalsIgnoreCase("true") || value.toString().equalsIgnoreCase("false"))) {
                     response = Boolean.parseBoolean(value.toString());
+                }
+                break;
+            case FLOAT:
+                if (!(value instanceof Float) && value.toString().matches("^-?\\d+(?:[.]\\d+)$")) {
+                    response = Float.parseFloat(value.toString());
                 }
                 break;
             default:

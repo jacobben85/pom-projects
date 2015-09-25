@@ -36,7 +36,25 @@ public class Standalone {
 
         Gson gson = new Gson();
         HashMap<String,Object> result = new ObjectMapper().readValue(json, HashMap.class);
-        HashMap<String,Object> result2 = (HashMap<String,Object>) MapUtils.parse(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[*].@code-key", TypeParser.Type.INTEGER);
-        System.out.println(gson.toJson(result2));
+        MapUtils.parse(result, "$.sports-content.sports-metadata.sports-content-codes.sports-content-code.[*].@code-key", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.event-metadata.@event-key", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.event-metadata.site.site-stats.@attendance", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.event-metadata.event-metadata-soccer.@week", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.event-metadata.event-metadata-soccer.@minutes-elapsed", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.event-metadata.event-metadata-soccer.time-adjustment.@period-extra-time-elapsed", TypeParser.Type.INTEGER);
+
+        MapUtils.parse(result, "$.sports-content.sports-event.team.[*].team-metadata.@team-key", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.team.[*].team-stats.@score", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.team.[*].team-stats.@score-opposing", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.team.[*].team-stats.@time-of-possession-percentage", TypeParser.Type.FLOAT);
+        MapUtils.parse(result, "$.sports-content.sports-event.team.[*].team-stats.sub-score.[*].@score", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.team.[*].team-stats.sub-score.[*].@period-value", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.team.[*].team-stats.team-stats-soccer.@line-formation", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.team.[*].team-stats.team-stats-soccer.stats-soccer-offensive.[*]", TypeParser.Type.INTEGER);
+
+        MapUtils.parse(result, "$.sports-content.sports-event.team.[*].player.[*].player-metadata.@player-key", TypeParser.Type.INTEGER);
+        MapUtils.parse(result, "$.sports-content.sports-event.team.[*].player.[*].player-stats.player-stats-soccer.stats-soccer-offensive.[*]", TypeParser.Type.INTEGER);
+
+        System.out.println(gson.toJson(result));
     }
 }
