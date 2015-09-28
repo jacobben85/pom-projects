@@ -13,9 +13,9 @@ public class StandaloneTest {
         Standalone standalone = new Standalone();
         try {
 
-            String eventId = "832461";
-            String startTime = "20150922T000000-0500";
-            String endTime = "20150924T230000-0500";
+            String eventId = "832457";
+            String startTime = "20150922T010000-0400";
+            String endTime = "20150924T000000-0400";
 
             String fixtureKeys = "event-stats,event-stats-progressive";
             String url = "http://feed5.xmlteam.com/api/feeds?" +
