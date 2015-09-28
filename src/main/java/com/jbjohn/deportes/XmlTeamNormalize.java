@@ -5,7 +5,6 @@ import de.odysseus.staxon.json.JsonXMLConfig;
 import de.odysseus.staxon.json.JsonXMLConfigBuilder;
 import de.odysseus.staxon.json.JsonXMLOutputFactory;
 
-import java.io.*;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLInputFactory;
@@ -15,6 +14,7 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
+import java.io.*;
 
 /**
  *
@@ -58,7 +58,7 @@ public class XmlTeamNormalize {
         return !response1.isEmpty() && !response2.isEmpty() && !response3.isEmpty();
     }
 
-    private String transformer(InputStream xml, InputStream xsl, boolean print) {
+    public static String transformer(InputStream xml, InputStream xsl, boolean print) {
         StreamSource stylesource = new StreamSource(xsl);
         TransformerFactory factory = TransformerFactory.newInstance();
         javax.xml.transform.Transformer transformer;

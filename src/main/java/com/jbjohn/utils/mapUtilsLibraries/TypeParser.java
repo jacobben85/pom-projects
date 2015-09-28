@@ -35,9 +35,10 @@ public class TypeParser {
 
         if (map instanceof HashMap) {
             return setByPath((HashMap<String, Object>) map, key);
-        } else {
+        } else if (map instanceof ArrayList) {
             return setByPath((ArrayList) map, key);
         }
+        return map;
     }
 
     private static Object setByPath(HashMap<String, Object> map, String path) {
